@@ -1,0 +1,107 @@
+{
+  "name": "frameworkx",
+  "version": "1.0.0",
+  "description": "A production-ready CSS framework similar to Bootstrap + Tailwind (hybrid approach)",
+  "main": "src/frameworkx.css",
+  "scripts": {
+    "build": "npm run build-css && npm run build-js",
+    "build-css": "node build/build-css.js",
+    "build-js": "node build/build-js.js",
+    "minify": "npm run minify-css && npm run minify-js",
+    "minify-css": "node build/minify-css.js",
+    "minify-js": "node build/minify-js.js",
+    "dev": "npm run build && npm run minify",
+    "watch": "npm run watch-css & npm run watch-js",
+    "watch-css": "node build/watch-css.js",
+    "watch-js": "node build/watch-js.js",
+    "serve": "node build/serve.js",
+    "clean": "rimraf dist",
+    "lint": "stylelint src/**/*.css && eslint src/**/*.js",
+    "test": "npm run lint",
+    "prepublishOnly": "npm run clean && npm run build && npm run minify"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "bootstrap",
+    "tailwind",
+    "responsive",
+    "mobile-first",
+    "frontend",
+    "ui",
+    "components",
+    "utilities"
+  ],
+  "author": "FrameworkX Team",
+  "license": "MIT",
+  "homepage": "https://frameworkx.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frameworkx/frameworkx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frameworkx/frameworkx/issues"
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "clean-css": "^5.3.2",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.44.0",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "postcss": "^8.4.24",
+    "postcss-import": "^15.1.0",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.7.0",
+    "terser": "^5.18.2",
+    "watch": "^1.0.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "import",
+            "media",
+            "supports"
+          ]
+        }
+      ]
+    }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "warn"
+    }
+  }
+}

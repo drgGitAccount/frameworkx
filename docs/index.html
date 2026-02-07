@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameworkX - Modern CSS Framework</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .nav-pills .nav-link {
+            border-radius: 0.375rem;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fw-header fw-header-primary">
+        <div class="fw-container">
+            <div class="fw-header-container">
+                <a href="#" class="fw-header-brand">
+                    <span class="fw-header-brand-text">FrameworkX</span>
+                </a>
+                <nav class="fw-header-nav">
+                    <a href="#features" class="fw-header-nav-link">Features</a>
+                    <a href="#components" class="fw-header-nav-link">Components</a>
+                    <a href="#utilities" class="fw-header-nav-link">Utilities</a>
+                    <a href="#examples" class="fw-header-nav-link">Examples</a>
+                    <a href="#getting-started" class="fw-header-nav-link">Getting Started</a>
+                </nav>
+                <div class="fw-header-actions">
+                    <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="fw-container">
+            <div class="fw-row">
+                <div class="fw-col-lg-8">
+                    <h1 class="display-2 fw-font-weight-bold mb-4">FrameworkX</h1>
+                    <p class="lead mb-4">A production-ready CSS framework that combines the best of Bootstrap and Tailwind CSS. Modern, flexible, and easy to extend.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#getting-started" class="fw-btn fw-btn-light fw-btn-lg">Get Started</a>
+                        <a href="#examples" class="fw-btn fw-btn-outline-light fw-btn-lg">View Examples</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="fw-container">
+            <h2 class="text-center mb-5">Why FrameworkX?</h2>
+            <div class="fw-row">
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Production Ready</h5>
+                            <p class="fw-card-text">Built with production in mind. Clean, optimized, and thoroughly tested code that you can trust.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Utility First</h5>
+                            <p class="fw-card-text">Comprehensive utility classes for rapid development. Build custom designs without writing custom CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Component Based</h5>
+                            <p class="fw-card-text">Pre-built components that work out of the box. Buttons, cards, forms, modals, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section id="getting-started" class="py-5 bg-light">
+        <div class="fw-container">
+            <h2 class="text-center mb-5">Quick Start</h2>
+            <div class="fw-row">
+                <div class="fw-col-lg-8 mx-auto">
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <h4 class="fw-card-title">Installation</h4>
+                            <p>Add FrameworkX to your project with a simple link tag:</p>
+                            <div class="code-block">
+                                <pre>&lt;link href="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.js"&gt;&lt;/script&gt;</pre>
+                            </div>
+                            
+                            <h4 class="fw-card-title mt-4">Basic Usage</h4>
+                            <p>Start building with FrameworkX components:</p>
+                            <div class="code-block">
+                                <pre>&lt;div class="fw-container"&gt;
+  &lt;div class="fw-row"&gt;
+    &lt;div class="fw-col-md-6"&gt;
+      &lt;h1&gt;Hello FrameworkX!&lt;/h1&gt;
+      &lt;button class="fw-btn fw-btn-primary"&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="fw-col-md-6"&gt;
+      &lt;div class="fw-card"&gt;
+        &lt;div class="fw-card-body"&gt;
+          &lt;h5 class="fw-card-title"&gt;Card Title&lt;/h5&gt;
+          &lt;p class="fw-card-text"&gt;Some quick example text.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Preview -->
+    <section id="components" class="py-5">
+        <div class="fw-container">
+            <h2 class="text-center mb-5">Components</h2>
+            
+            <!-- Buttons -->
+            <div class="mb-5">
+                <h3 class="mb-3">Buttons</h3>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button class="fw-btn fw-btn-primary">Primary</button>
+                    <button class="fw-btn fw-btn-secondary">Secondary</button>
+                    <button class="fw-btn fw-btn-success">Success</button>
+                    <button class="fw-btn fw-btn-danger">Danger</button>
+                    <button class="fw-btn fw-btn-warning">Warning</button>
+                    <button class="fw-btn fw-btn-info">Info</button>
+                    <button class="fw-btn fw-btn-light">Light</button>
+                    <button class="fw-btn fw-btn-dark">Dark</button>
+                </div>
+            </div>
+
+            <!-- Alerts -->
+            <div class="mb-5">
+                <h3 class="mb-3">Alerts</h3>
+                <div class="fw-alert fw-alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="fw-alert fw-alert-success" role="alert">
+                    A simple success alert—check it out!
+                </div>
+                <div class="fw-alert fw-alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="mb-5">
+                <h3 class="mb-3">Cards</h3>
+                <div class="fw-row">
+                    <div class="fw-col-md-4 mb-3">
+                        <div class="fw-card">
+                            <div class="fw-card-body">
+                                <h5 class="fw-card-title">Card title</h5>
+                                <p class="fw-card-text">Some quick example text to build on the card title.</p>
+                                <a href="#" class="fw-btn fw-btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fw-col-md-4 mb-3">
+                        <div class="fw-card">
+                            <div class="fw-card-body">
+                                <h5 class="fw-card-title">Card title</h5>
+                                <p class="fw-card-text">Some quick example text to build on the card title.</p>
+                                <a href="#" class="fw-btn fw-btn-success">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fw-col-md-4 mb-3">
+                        <div class="fw-card">
+                            <div class="fw-card-body">
+                                <h5 class="fw-card-title">Card title</h5>
+                                <p class="fw-card-text">Some quick example text to build on the card title.</p>
+                                <a href="#" class="fw-btn fw-btn-danger">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div class="mb-5">
+                <h3 class="mb-3">Forms</h3>
+                <div class="fw-card">
+                    <div class="fw-card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="fw-form-label">Email address</label>
+                                <input type="email" class="fw-form-control" id="exampleInputEmail1" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="fw-form-label">Password</label>
+                                <input type="password" class="fw-form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputSelect" class="fw-form-label">Select</label>
+                                <select class="fw-form-select" id="exampleInputSelect">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <div class="fw-form-check">
+                                    <input class="fw-form-check-input" type="checkbox" id="check1">
+                                    <label class="fw-form-check-label" for="check1">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="fw-btn fw-btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fw-footer">
+        <div class="fw-container">
+            <div class="fw-footer-content">
+                <div class="fw-footer-section">
+                    <h4>FrameworkX</h4>
+                    <p>A modern CSS framework for building responsive, mobile-first websites.</p>
+                    <div class="fw-footer-social">
+                        <a href="#" class="fw-footer-social-link">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="fw-footer-social-link">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="fw-footer-social-link">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Utilities</a></li>
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Resources</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">NPM</a></li>
+                        <li><a href="#">CDN</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Community</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contributing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fw-footer-bottom">
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
+                <ul class="fw-footer-bottom-links">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">License</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/modal.js"></script>
+    <script src="../src/js/dropdown.js"></script>
+    <script src="../src/js/collapse.js"></script>
+</body>
+</html>

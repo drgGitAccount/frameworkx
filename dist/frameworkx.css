@@ -1,0 +1,40 @@
+/*!
+ * FrameworkX (FWX) v1.0.0
+ * A production-ready CSS framework similar to Bootstrap + Tailwind
+ * https://frameworkx.dev
+ * 
+ * Copyright (c) 2024 FrameworkX Team
+ * Licensed under MIT (https://github.com/frameworkx/frameworkx/blob/main/LICENSE)
+ */
+
+/* Core Foundation */
+@import url('../src/core/_reset.css');
+@import url('../src/core/_variables.css');
+@import url('../src/core/_typography.css');
+@import url('../src/core/_grid.css');
+@import url('../src/core/_utilities.css');
+
+/* Layout Components */
+@import url('../src/layout/_container.css');
+@import url('../src/layout/_header.css');
+@import url('../src/layout/_footer.css');
+@import url('../src/layout/_sidebar.css');
+
+/* UI Components */
+@import url('../src/components/_buttons.css');
+@import url('../src/components/_cards.css');
+@import url('../src/components/_forms.css');
+@import url('../src/components/_badges.css');
+@import url('../src/components/_alerts.css');
+@import url('../src/components/_modal.css');
+
+/* Responsive Utilities */
+@import url('../src/responsive/_sm.css');
+@import url('../src/responsive/_md.css');
+@import url('../src/responsive/_lg.css');
+@import url('../src/responsive/_xl.css');
+
+/* FrameworkX Build Information */
+/* Build Date: 2024-02-06 */
+/* Version: 1.0.0 */
+/* Author: FrameworkX Team */

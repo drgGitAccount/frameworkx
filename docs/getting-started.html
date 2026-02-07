@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - FrameworkX</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <style>
+        .sidebar-nav {
+            position: sticky;
+            top: 2rem;
+        }
+        .content-section {
+            scroll-margin-top: 2rem;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block pre {
+            margin: 0;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fw-header fw-header-primary">
+        <div class="fw-container">
+            <div class="fw-header-container">
+                <a href="index.html" class="fw-header-brand">
+                    <span class="fw-header-brand-text">FrameworkX</span>
+                </a>
+                <nav class="fw-header-nav">
+                    <a href="index.html" class="fw-header-nav-link">Home</a>
+                    <a href="getting-started.html" class="fw-header-nav-link active">Getting Started</a>
+                    <a href="components.html" class="fw-header-nav-link">Components</a>
+                    <a href="utilities.html" class="fw-header-nav-link">Utilities</a>
+                </nav>
+                <div class="fw-header-actions">
+                    <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="fw-container my-5">
+        <div class="fw-row">
+            <!-- Sidebar -->
+            <div class="fw-col-lg-3">
+                <nav class="sidebar-nav">
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <h6 class="fw-card-title">Getting Started</h6>
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#introduction">Introduction</a>
+                                <a class="nav-link" href="#download">Download</a>
+                                <a class="nav-link" href="#contents">Contents</a>
+                                <a class="nav-link" href="#browser-support">Browser Support</a>
+                                <a class="nav-link" href="#customization">Customization</a>
+                                <a class="nav-link" href="#build-tools">Build Tools</a>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Content -->
+            <div class="fw-col-lg-9">
+                <!-- Introduction -->
+                <section id="introduction" class="content-section mb-5">
+                    <h1>Getting Started</h1>
+                    <p class="lead">An overview of FrameworkX, how to download and use it, and some basic templates and examples.</p>
+                    
+                    <h2>What is FrameworkX?</h2>
+                    <p>FrameworkX is a modern, production-ready CSS framework that combines the best features of Bootstrap and Tailwind CSS. It provides:</p>
+                    <ul>
+                        <li>Pre-built components for rapid development</li>
+                        <li>Comprehensive utility classes for custom designs</li>
+                        <li>Responsive grid system</li>
+                        <li>Modern CSS variables for easy theming</li>
+                        <li>Lightweight JavaScript components</li>
+                        <li>Mobile-first approach</li>
+                    </ul>
+                </section>
+
+                <!-- Download -->
+                <section id="download" class="content-section mb-5">
+                    <h2>Download</h2>
+                    <p>Get started with FrameworkX in your project by including the pre-built CSS and JS files.</p>
+
+                    <h3>CDN</h3>
+                    <p>The quickest way to get started is to use the CDN:</p>
+                    <div class="code-block">
+                        <pre>&lt;!-- CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.css" rel="stylesheet"&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.js"&gt;&lt;/script&gt;</pre>
+                    </div>
+
+                    <h3>Download Files</h3>
+                    <p>Download the compiled and minified versions of FrameworkX:</p>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="fw-btn fw-btn-primary">Download CSS</a>
+                        <a href="#" class="fw-btn fw-btn-secondary">Download JS</a>
+                        <a href="#" class="fw-btn fw-btn-outline-primary">Download Source</a>
+                    </div>
+
+                    <h3>Package Managers</h3>
+                    <p>Install FrameworkX using your favorite package manager:</p>
+                    <div class="code-block">
+                        <pre># NPM
+npm install frameworkx
+
+# Yarn
+yarn add frameworkx
+
+# Bower
+bower install frameworkx</pre>
+                    </div>
+                </section>
+
+                <!-- Contents -->
+                <section id="contents" class="content-section mb-5">
+                    <h2>Contents</h2>
+                    <p>FrameworkX is downloaded in two formats:</p>
+                    <ul>
+                        <li><strong>Compiled CSS and JS</strong> - Ready-to-use minified files</li>
+                        <li><strong>Source files</strong> - Individual source files for customization</li>
+                    </ul>
+
+                    <h3>Compiled Files</h3>
+                    <p>The compiled download includes:</p>
+                    <div class="code-block">
+                        <pre>frameworkx/
+├── dist/
+│   ├── frameworkx.css
+│   ├── frameworkx.min.css
+│   ├── frameworkx.js
+│   └── frameworkx.min.js</pre>
+                    </div>
+
+                    <h3>Source Files</h3>
+                    <p>The source download includes the complete project structure:</p>
+                    <div class="code-block">
+                        <pre>frameworkx/
+├── src/
+│   ├── core/
+│   │   ├── _reset.css
+│   │   ├── _variables.css
+│   │   ├── _typography.css
+│   │   ├── _grid.css
+│   │   └── _utilities.css
+│   ├── components/
+│   │   ├── _buttons.css
+│   │   ├── _cards.css
+│   │   ├── _forms.css
+│   │   ├── _badges.css
+│   │   ├── _alerts.css
+│   │   └── _modal.css
+│   ├── layout/
+│   │   ├── _container.css
+│   │   ├── _header.css
+│   │   ├── _footer.css
+│   │   └── _sidebar.css
+│   ├── responsive/
+│   │   ├── _sm.css
+│   │   ├── _md.css
+│   │   ├── _lg.css
+│   │   └── _xl.css
+│   ├── js/
+│   │   ├── modal.js
+│   │   ├── dropdown.js
+│   │   └── collapse.js
+│   └── frameworkx.css</pre>
+                    </div>
+                </section>
+
+                <!-- Browser Support -->
+                <section id="browser-support" class="content-section mb-5">
+                    <h2>Browser Support</h2>
+                    <p>FrameworkX supports the latest, stable releases of all major browsers:</p>
+                    <ul>
+                        <li>Chrome (latest)</li>
+                        <li>Firefox (latest)</li>
+                        <li>Safari (latest)</li>
+                        <li>Edge (latest)</li>
+                        <li>Opera (latest)</li>
+                    </ul>
+                    
+                    <div class="fw-alert fw-alert-warning">
+                        <strong>Note:</strong> Internet Explorer is not supported.
+                    </div>
+                </section>
+
+                <!-- Customization -->
+                <section id="customization" class="content-section mb-5">
+                    <h2>Customization</h2>
+                    <p>FrameworkX is built with CSS variables, making it easy to customize the appearance:</p>
+
+                    <h3>Override Variables</h3>
+                    <p>Create your own CSS file and override the default variables:</p>
+                    <div class="code-block">
+                        <pre>/* custom.css */
+:root {
+  --fw-color-primary: #your-color;
+  --fw-color-secondary: #your-color;
+  --fw-font-family-base: 'Your Font', sans-serif;
+  --fw-border-radius: 8px;
+}</pre>
+                    </div>
+
+                    <h3>Custom Build</h3>
+                    <p>For more advanced customization, you can modify the source files and rebuild:</p>
+                    <div class="code-block">
+                        <pre># Install dependencies
+npm install
+
+# Build CSS
+npm run build:css
+
+# Build JS
+npm run build:js</pre>
+                    </div>
+                </section>
+
+                <!-- Build Tools -->
+                <section id="build-tools" class="content-section mb-5">
+                    <h2>Build Tools</h2>
+                    <p>FrameworkX can be integrated with various build tools:</p>
+
+                    <h3>Webpack</h3>
+                    <div class="code-block">
+                        <pre>// webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
+};</pre>
+                    </div>
+
+                    <h3>Sass/SCSS</h3>
+                    <p>While FrameworkX uses pure CSS, you can still import it into your Sass files:</p>
+                    <div class="code-block">
+                        <pre>// main.scss
+@import 'frameworkx/src/frameworkx.css';
+
+// Your custom styles
+.custom-component {
+  // Your styles here
+}</pre>
+                    </div>
+
+                    <h3>PostCSS</h3>
+                    <div class="code-block">
+                        <pre>// postcss.config.js
+module.exports = {
+  plugins: [
+    require('postcss-import'),
+    require('autoprefixer'),
+    require('cssnano')
+  ]
+};</pre>
+                    </div>
+                </section>
+
+                <!-- Basic Template -->
+                <section class="content-section mb-5">
+                    <h2>Basic Template</h2>
+                    <p>Here's a basic HTML template to get you started:</p>
+                    <div class="code-block">
+                        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My FrameworkX App&lt;/title&gt;
+    &lt;link href="path/to/frameworkx.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="fw-container"&gt;
+        &lt;div class="fw-row"&gt;
+            &lt;div class="fw-col-12"&gt;
+                &lt;h1&gt;Hello, FrameworkX!&lt;/h1&gt;
+                &lt;p&gt;Welcome to your new app.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="path/to/frameworkx.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fw-footer">
+        <div class="fw-container">
+            <div class="fw-footer-bottom">
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
+                <ul class="fw-footer-bottom-links">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">License</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/modal.js"></script>
+    <script src="../src/js/dropdown.js"></script>
+    <script src="../src/js/collapse.js"></script>
+</body>
+</html>

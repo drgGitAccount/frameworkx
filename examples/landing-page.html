@@ -1,0 +1,171 @@
+<!-- FWX Landing Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameworkX - Modern CSS Framework</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0;
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .cta-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="fw-header fw-header-primary">
+        <div class="fw-container">
+            <div class="fw-header-container">
+                <a href="#" class="fw-header-brand">
+                    <span class="fw-header-brand-text">FrameworkX</span>
+                </a>
+                <nav class="fw-header-nav">
+                    <a href="#features" class="fw-header-nav-link">Features</a>
+                    <a href="#pricing" class="fw-header-nav-link">Pricing</a>
+                    <a href="#docs" class="fw-header-nav-link">Docs</a>
+                    <a href="#contact" class="fw-header-nav-link">Contact</a>
+                </nav>
+                <div class="fw-header-actions">
+                    <button class="fw-btn fw-btn-outline-light">Sign In</button>
+                    <button class="fw-btn fw-btn-light">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="fw-container">
+            <div class="fw-row">
+                <div class="fw-col-lg-6">
+                    <h1 class="display-3 fw-font-weight-bold mb-4">Build Beautiful Websites Faster</h1>
+                    <p class="lead mb-4">FrameworkX combines the best of Bootstrap and Tailwind CSS. Modern, flexible, and production-ready.</p>
+                    <div class="d-flex gap-3">
+                        <button class="fw-btn fw-btn-light fw-btn-lg">Start Building</button>
+                        <button class="fw-btn fw-btn-outline-light fw-btn-lg">View Demo</button>
+                    </div>
+                </div>
+                <div class="fw-col-lg-6">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/500x400" alt="FrameworkX Preview" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="fw-container">
+            <div class="text-center mb-5">
+                <h2 class="fw-font-weight-bold">Why Choose FrameworkX?</h2>
+                <p class="text-muted">Everything you need to build modern web applications</p>
+            </div>
+            <div class="fw-row">
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Easy to Use</h5>
+                            <p class="fw-card-text">Simple and intuitive API with comprehensive documentation and examples.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.664-.669a.75.75 0 1 1 1.06-1.06l.118.118 1.13-1.888a.75.75 0 1 1 1.28.77Z"/>
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14Zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16Z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Production Ready</h5>
+                            <p class="fw-card-text">Built with performance and reliability in mind for production applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-md-4 mb-4">
+                    <div class="fw-card feature-card h-100">
+                        <div class="fw-card-body text-center">
+                            <div class="text-primary mb-3">
+                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                                </svg>
+                            </div>
+                            <h5 class="fw-card-title">Fully Customizable</h5>
+                            <p class="fw-card-text">Extensive theming options and CSS variables for complete design control.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="fw-container">
+            <div class="fw-row">
+                <div class="fw-col-lg-8 mx-auto text-center">
+                    <h2 class="fw-font-weight-bold mb-4">Ready to Get Started?</h2>
+                    <p class="lead mb-4">Join thousands of developers building amazing websites with FrameworkX.</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <button class="fw-btn fw-btn-primary fw-btn-lg">Start Free Trial</button>
+                        <button class="fw-btn fw-btn-outline-primary fw-btn-lg">View Documentation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fw-footer">
+        <div class="fw-container">
+            <div class="fw-footer-content">
+                <div class="fw-footer-section">
+                    <h4>FrameworkX</h4>
+                    <p>Modern CSS framework for building responsive, mobile-first websites.</p>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Links</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Resources</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">NPM</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fw-footer-bottom">
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

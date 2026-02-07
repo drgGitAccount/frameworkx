@@ -1,0 +1,200 @@
+/* FrameworkX Badges */
+
+.fw-badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: var(--fw-font-weight-bold);
+  line-height: 1;
+  color: var(--fw-color-light);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--fw-border-radius-full);
+}
+
+.fw-badge:empty {
+  display: none;
+}
+
+/* Button badges */
+.btn .fw-badge {
+  position: relative;
+  top: -1px;
+}
+
+/* Badge colors */
+.fw-bg-primary {
+  background-color: var(--fw-color-primary) !important;
+}
+
+.fw-bg-secondary {
+  background-color: var(--fw-color-secondary) !important;
+}
+
+.fw-bg-success {
+  background-color: var(--fw-color-success) !important;
+}
+
+.fw-bg-danger {
+  background-color: var(--fw-color-danger) !important;
+}
+
+.fw-bg-warning {
+  background-color: var(--fw-color-warning) !important;
+  color: var(--fw-color-dark) !important;
+}
+
+.fw-bg-info {
+  background-color: var(--fw-color-info) !important;
+}
+
+.fw-bg-light {
+  background-color: var(--fw-color-light) !important;
+  color: var(--fw-color-dark) !important;
+}
+
+.fw-bg-dark {
+  background-color: var(--fw-color-dark) !important;
+}
+
+.fw-bg-gray-100 { background-color: var(--fw-color-gray-100) !important; }
+.fw-bg-gray-200 { background-color: var(--fw-color-gray-200) !important; }
+.fw-bg-gray-300 { background-color: var(--fw-color-gray-300) !important; }
+.fw-bg-gray-400 { background-color: var(--fw-color-gray-400) !important; }
+.fw-bg-gray-500 { background-color: var(--fw-color-gray-500) !important; }
+.fw-bg-gray-600 { background-color: var(--fw-color-gray-600) !important; }
+.fw-bg-gray-700 { background-color: var(--fw-color-gray-700) !important; }
+.fw-bg-gray-800 { background-color: var(--fw-color-gray-800) !important; }
+.fw-bg-gray-900 { background-color: var(--fw-color-gray-900) !important; }
+.fw-bg-white { background-color: var(--fw-color-white) !important; }
+.fw-bg-black { background-color: var(--fw-color-black) !important; }
+
+/* Pill badges */
+.fw-badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: var(--fw-border-radius-pill);
+}
+
+/* Badge positioning */
+.fw-position-relative {
+  position: relative !important;
+}
+
+.fw-position-absolute {
+  position: absolute !important;
+}
+
+.fw-top-0 {
+  top: 0 !important;
+}
+
+.fw-start-0 {
+  left: 0 !important;
+}
+
+.fw-translate-middle {
+  transform: translateX(-50%) translateY(-50%) !important;
+}
+
+.fw-translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.fw-translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+/* Notification badge */
+.fw-btn .fw-badge.fw-position-absolute {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* Rounded badges */
+.fw-badge-rounded {
+  border-radius: var(--fw-border-radius);
+}
+
+.fw-badge-rounded-sm {
+  border-radius: var(--fw-border-radius-sm);
+}
+
+.fw-badge-rounded-lg {
+  border-radius: var(--fw-border-radius-lg);
+}
+
+.fw-badge-rounded-xl {
+  border-radius: var(--fw-border-radius-xl);
+}
+
+.fw-badge-rounded-2xl {
+  border-radius: var(--fw-border-radius-2xl);
+}
+
+/* Outline badges */
+.fw-badge-outline-primary {
+  color: var(--fw-color-primary);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-primary);
+}
+
+.fw-badge-outline-secondary {
+  color: var(--fw-color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-secondary);
+}
+
+.fw-badge-outline-success {
+  color: var(--fw-color-success);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-success);
+}
+
+.fw-badge-outline-danger {
+  color: var(--fw-color-danger);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-danger);
+}
+
+.fw-badge-outline-warning {
+  color: var(--fw-color-warning);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-warning);
+}
+
+.fw-badge-outline-info {
+  color: var(--fw-color-info);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-info);
+}
+
+.fw-badge-outline-light {
+  color: var(--fw-color-light);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-light);
+}
+
+.fw-badge-outline-dark {
+  color: var(--fw-color-dark);
+  background-color: transparent;
+  border: 1px solid var(--fw-color-dark);
+}
+
+/* Badge sizes */
+.fw-badge-sm {
+  padding: 0.25em 0.5em;
+  font-size: 0.6875em;
+}
+
+.fw-badge-lg {
+  padding: 0.45em 0.8em;
+  font-size: 0.8125em;
+}
+
+.fw-badge-xl {
+  padding: 0.55em 0.95em;
+  font-size: 0.875em;
+}

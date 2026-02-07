@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - FrameworkX</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <style>
+        .sidebar-nav {
+            position: sticky;
+            top: 2rem;
+        }
+        .content-section {
+            scroll-margin-top: 2rem;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block pre {
+            margin: 0;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fw-header fw-header-primary">
+        <div class="fw-container">
+            <div class="fw-header-container">
+                <a href="index.html" class="fw-header-brand">
+                    <span class="fw-header-brand-text">FrameworkX</span>
+                </a>
+                <nav class="fw-header-nav">
+                    <a href="index.html" class="fw-header-nav-link">Home</a>
+                    <a href="getting-started.html" class="fw-header-nav-link">Getting Started</a>
+                    <a href="components.html" class="fw-header-nav-link active">Components</a>
+                    <a href="utilities.html" class="fw-header-nav-link">Utilities</a>
+                </nav>
+                <div class="fw-header-actions">
+                    <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="fw-container my-5">
+        <div class="fw-row">
+            <!-- Sidebar -->
+            <div class="fw-col-lg-3">
+                <nav class="sidebar-nav">
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <h6 class="fw-card-title">Components</h6>
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#alerts">Alerts</a>
+                                <a class="nav-link" href="#badges">Badges</a>
+                                <a class="nav-link" href="#buttons">Buttons</a>
+                                <a class="nav-link" href="#cards">Cards</a>
+                                <a class="nav-link" href="#forms">Forms</a>
+                                <a class="nav-link" href="#modal">Modal</a>
+                                <a class="nav-link" href="#header">Header</a>
+                                <a class="nav-link" href="#footer">Footer</a>
+                                <a class="nav-link" href="#sidebar">Sidebar</a>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Content -->
+            <div class="fw-col-lg-9">
+                <!-- Alerts -->
+                <section id="alerts" class="content-section mb-5">
+                    <h1>Alerts</h1>
+                    <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+
+                    <h3>Examples</h3>
+                    <div class="fw-alert fw-alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-secondary" role="alert">
+                        A simple secondary alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-success" role="alert">
+                        A simple success alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-danger" role="alert">
+                        A simple danger alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-warning" role="alert">
+                        A simple warning alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-info" role="alert">
+                        A simple info alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-light" role="alert">
+                        A simple light alert—check it out!
+                    </div>
+                    <div class="fw-alert fw-alert-dark" role="alert">
+                        A simple dark alert—check it out!
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;div class="fw-alert fw-alert-primary" role="alert"&gt;
+    A simple primary alert—check it out!
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Badges -->
+                <section id="badges" class="content-section mb-5">
+                    <h1>Badges</h1>
+                    <p class="lead">Documentation and examples for badges, our small count and labeling component.</p>
+
+                    <h3>Examples</h3>
+                    <h1>Example heading <span class="fw-badge fw-bg-primary">New</span></h1>
+                    <h2>Example heading <span class="fw-badge fw-bg-secondary">New</span></h2>
+                    <h3>Example heading <span class="fw-badge fw-bg-success">New</span></h3>
+                    <h4>Example heading <span class="fw-badge fw-bg-danger">New</span></h4>
+                    <h5>Example heading <span class="fw-badge fw-bg-warning">New</span></h5>
+                    <h6>Example heading <span class="fw-badge fw-bg-info">New</span></h6>
+
+                    <div class="mt-4">
+                        <button type="button" class="fw-btn fw-btn-primary">
+                            Notifications <span class="fw-badge fw-bg-light text-dark">4</span>
+                        </button>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;h1&gt;Example heading &lt;span class="fw-badge fw-bg-primary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+&lt;button type="button" class="fw-btn fw-btn-primary"&gt;
+    Notifications &lt;span class="fw-badge fw-bg-light text-dark"&gt;4&lt;/span&gt;
+&lt;/button&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Buttons -->
+                <section id="buttons" class="content-section mb-5">
+                    <h1>Buttons</h1>
+                    <p class="lead">Use FrameworkX's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+
+                    <h3>Examples</h3>
+                    <div class="d-flex gap-2 flex-wrap mb-4">
+                        <button type="button" class="fw-btn fw-btn-primary">Primary</button>
+                        <button type="button" class="fw-btn fw-btn-secondary">Secondary</button>
+                        <button type="button" class="fw-btn fw-btn-success">Success</button>
+                        <button type="button" class="fw-btn fw-btn-danger">Danger</button>
+                        <button type="button" class="fw-btn fw-btn-warning">Warning</button>
+                        <button type="button" class="fw-btn fw-btn-info">Info</button>
+                        <button type="button" class="fw-btn fw-btn-light">Light</button>
+                        <button type="button" class="fw-btn fw-btn-dark">Dark</button>
+                    </div>
+
+                    <h3>Outline Buttons</h3>
+                    <div class="d-flex gap-2 flex-wrap mb-4">
+                        <button type="button" class="fw-btn fw-btn-outline-primary">Primary</button>
+                        <button type="button" class="fw-btn fw-btn-outline-secondary">Secondary</button>
+                        <button type="button" class="fw-btn fw-btn-outline-success">Success</button>
+                        <button type="button" class="fw-btn fw-btn-outline-danger">Danger</button>
+                        <button type="button" class="fw-btn fw-btn-outline-warning">Warning</button>
+                        <button type="button" class="fw-btn fw-btn-outline-info">Info</button>
+                        <button type="button" class="fw-btn fw-btn-outline-light">Light</button>
+                        <button type="button" class="fw-btn fw-btn-outline-dark">Dark</button>
+                    </div>
+
+                    <h3>Sizes</h3>
+                    <div class="d-flex gap-2 flex-wrap align-items-center mb-4">
+                        <button type="button" class="fw-btn fw-btn-primary fw-btn-lg">Large button</button>
+                        <button type="button" class="fw-btn fw-btn-secondary fw-btn-lg">Large button</button>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap align-items-center mb-4">
+                        <button type="button" class="fw-btn fw-btn-primary">Default button</button>
+                        <button type="button" class="fw-btn fw-btn-secondary">Default button</button>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap align-items-center mb-4">
+                        <button type="button" class="fw-btn fw-btn-primary fw-btn-sm">Small button</button>
+                        <button type="button" class="fw-btn fw-btn-secondary fw-btn-sm">Small button</button>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;button type="button" class="fw-btn fw-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="fw-btn fw-btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="fw-btn fw-btn-primary fw-btn-lg"&gt;Large&lt;/button&gt;
+&lt;button type="button" class="fw-btn fw-btn-primary fw-btn-sm"&gt;Small&lt;/button&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Cards -->
+                <section id="cards" class="content-section mb-5">
+                    <h1>Cards</h1>
+                    <p class="lead">A card is a flexible and extensible content container with multiple variants and options.</p>
+
+                    <h3>Basic Example</h3>
+                    <div class="fw-card mb-4">
+                        <div class="fw-card-body">
+                            <h5 class="fw-card-title">Card title</h5>
+                            <p class="fw-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="fw-btn fw-btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                    <h3>Content Types</h3>
+                    <div class="fw-row">
+                        <div class="fw-col-md-6 mb-4">
+                            <div class="fw-card">
+                                <div class="fw-card-body">
+                                    <h5 class="fw-card-title">Card title</h5>
+                                    <h6 class="fw-card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="fw-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="fw-btn fw-btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fw-col-md-6 mb-4">
+                            <div class="fw-card">
+                                <img src="https://via.placeholder.com/300x200" class="fw-card-img-top" alt="Card image">
+                                <div class="fw-card-body">
+                                    <p class="fw-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;div class="fw-card"&gt;
+    &lt;div class="fw-card-body"&gt;
+        &lt;h5 class="fw-card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="fw-card-text"&gt;Some quick example text.&lt;/p&gt;
+        &lt;a href="#" class="fw-btn fw-btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Forms -->
+                <section id="forms" class="content-section mb-5">
+                    <h1>Forms</h1>
+                    <p class="lead">Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.</p>
+
+                    <h3>Form Controls</h3>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="fw-form-label">Email address</label>
+                                    <input type="email" class="fw-form-control" id="exampleInputEmail1" placeholder="name@example.com">
+                                    <div id="emailHelp" class="fw-form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="fw-form-label">Password</label>
+                                    <input type="password" class="fw-form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputSelect" class="fw-form-label">Select</label>
+                                    <select class="fw-form-select" id="exampleInputSelect">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleTextarea" class="fw-form-label">Textarea</label>
+                                    <textarea class="fw-form-control" id="exampleTextarea" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="fw-form-check">
+                                        <input class="fw-form-check-input" type="checkbox" id="check1">
+                                        <label class="fw-form-check-label" for="check1">
+                                            Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="fw-form-check">
+                                        <input class="fw-form-check-input" type="radio" name="radio" id="radio1">
+                                        <label class="fw-form-check-label" for="radio1">
+                                            Option 1
+                                        </label>
+                                    </div>
+                                    <div class="fw-form-check">
+                                        <input class="fw-form-check-input" type="radio" name="radio" id="radio2">
+                                        <label class="fw-form-check-label" for="radio2">
+                                            Option 2
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="fw-btn fw-btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;div class="mb-3"&gt;
+    &lt;label for="exampleInputEmail1" class="fw-form-label"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="fw-form-control" id="exampleInputEmail1" placeholder="name@example.com"&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Modal -->
+                <section id="modal" class="content-section mb-5">
+                    <h1>Modal</h1>
+                    <p class="lead">Use FrameworkX's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+
+                    <h3>Live Demo</h3>
+                    <button type="button" class="fw-btn fw-btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="fw-modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Modal body text goes here.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;!-- Button trigger --&gt;
+&lt;button type="button" class="fw-btn fw-btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+    Launch demo modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="fw-modal fade" id="exampleModal" tabindex="-1"&gt;
+    &lt;div class="fw-modal-dialog"&gt;
+        &lt;div class="fw-modal-content"&gt;
+            &lt;div class="fw-modal-header"&gt;
+                &lt;h5 class="fw-modal-title"&gt;Modal title&lt;/h5&gt;
+                &lt;button type="button" class="fw-btn-close" data-dismiss="modal"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="fw-modal-body"&gt;
+                &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="fw-modal-footer"&gt;
+                &lt;button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="fw-btn fw-btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Header -->
+                <section id="header" class="content-section mb-5">
+                    <h1>Header</h1>
+                    <p class="lead">Powerful, responsive navigation header with support for branding, navigation, and more.</p>
+
+                    <h3>Default Header</h3>
+                    <header class="fw-header">
+                        <div class="fw-container">
+                            <div class="fw-header-container">
+                                <a href="#" class="fw-header-brand">FrameworkX</a>
+                                <nav class="fw-header-nav">
+                                    <a href="#" class="fw-header-nav-link active">Home</a>
+                                    <a href="#" class="fw-header-nav-link">Features</a>
+                                    <a href="#" class="fw-header-nav-link">Pricing</a>
+                                    <a href="#" class="fw-header-nav-link">About</a>
+                                </nav>
+                                <div class="fw-header-actions">
+                                    <button class="fw-btn fw-btn-outline-primary">Sign up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;header class="fw-header"&gt;
+    &lt;div class="fw-container"&gt;
+        &lt;div class="fw-header-container"&gt;
+            &lt;a href="#" class="fw-header-brand"&gt;FrameworkX&lt;/a&gt;
+            &lt;nav class="fw-header-nav"&gt;
+                &lt;a href="#" class="fw-header-nav-link active"&gt;Home&lt;/a&gt;
+                &lt;a href="#" class="fw-header-nav-link"&gt;Features&lt;/a&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <section id="footer" class="content-section mb-5">
+                    <h1>Footer</h1>
+                    <p class="lead">A powerful and responsive footer component with multiple layout options.</p>
+
+                    <h3>Default Footer</h3>
+                    <footer class="fw-footer">
+                        <div class="fw-container">
+                            <div class="fw-footer-content">
+                                <div class="fw-footer-section">
+                                    <h4>FrameworkX</h4>
+                                    <p>A modern CSS framework for building responsive websites.</p>
+                                </div>
+                                <div class="fw-footer-section">
+                                    <h4>Quick Links</h4>
+                                    <ul class="fw-footer-links">
+                                        <li><a href="#">Documentation</a></li>
+                                        <li><a href="#">Components</a></li>
+                                        <li><a href="#">Utilities</a></li>
+                                    </ul>
+                                </div>
+                                <div class="fw-footer-section">
+                                    <h4>Resources</h4>
+                                    <ul class="fw-footer-links">
+                                        <li><a href="#">GitHub</a></li>
+                                        <li><a href="#">NPM</a></li>
+                                        <li><a href="#">Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fw-footer-bottom">
+                                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;footer class="fw-footer"&gt;
+    &lt;div class="fw-container"&gt;
+        &lt;div class="fw-footer-content"&gt;
+            &lt;div class="fw-footer-section"&gt;
+                &lt;h4&gt;FrameworkX&lt;/h4&gt;
+                &lt;p&gt;A modern CSS framework.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="fw-footer-bottom"&gt;
+            &lt;p class="fw-footer-copyright"&gt;&copy; 2024 FrameworkX&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Sidebar -->
+                <section id="sidebar" class="content-section mb-5">
+                    <h1>Sidebar</h1>
+                    <p class="lead">A responsive sidebar navigation component with collapsible functionality.</p>
+
+                    <h3>Basic Sidebar</h3>
+                    <div class="d-flex">
+                        <aside class="fw-sidebar show" style="position: relative; height: 300px; transform: none;">
+                            <div class="fw-sidebar-header">
+                                <a href="#" class="fw-sidebar-brand">FrameworkX</a>
+                                <button class="fw-sidebar-close">&times;</button>
+                            </div>
+                            <nav class="fw-sidebar-nav">
+                                <div class="fw-sidebar-nav-item">
+                                    <a href="#" class="fw-sidebar-nav-link active">
+                                        <span class="fw-sidebar-nav-icon">🏠</span>
+                                        <span class="fw-sidebar-nav-text">Dashboard</span>
+                                    </a>
+                                </div>
+                                <div class="fw-sidebar-nav-item">
+                                    <a href="#" class="fw-sidebar-nav-link">
+                                        <span class="fw-sidebar-nav-icon">👥</span>
+                                        <span class="fw-sidebar-nav-text">Users</span>
+                                    </a>
+                                </div>
+                                <div class="fw-sidebar-nav-item">
+                                    <a href="#" class="fw-sidebar-nav-link">
+                                        <span class="fw-sidebar-nav-icon">⚙️</span>
+                                        <span class="fw-sidebar-nav-text">Settings</span>
+                                    </a>
+                                </div>
+                            </nav>
+                        </aside>
+                        <div class="flex-grow-1 p-3">
+                            <h4>Main Content</h4>
+                            <p>This is the main content area with the sidebar visible.</p>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;aside class="fw-sidebar"&gt;
+    &lt;div class="fw-sidebar-header"&gt;
+        &lt;a href="#" class="fw-sidebar-brand"&gt;FrameworkX&lt;/a&gt;
+        &lt;button class="fw-sidebar-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;nav class="fw-sidebar-nav"&gt;
+        &lt;div class="fw-sidebar-nav-item"&gt;
+            &lt;a href="#" class="fw-sidebar-nav-link active"&gt;
+                &lt;span class="fw-sidebar-nav-icon"&gt;🏠&lt;/span&gt;
+                &lt;span class="fw-sidebar-nav-text"&gt;Dashboard&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/aside&gt;</pre>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fw-footer">
+        <div class="fw-container">
+            <div class="fw-footer-bottom">
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
+                <ul class="fw-footer-bottom-links">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">License</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/modal.js"></script>
+    <script src="../src/js/dropdown.js"></script>
+    <script src="../src/js/collapse.js"></script>
+</body>
+</html>

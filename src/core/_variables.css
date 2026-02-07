@@ -1,0 +1,177 @@
+/* FrameworkX CSS Variables */
+
+:root {
+  /* Colors */
+  --fw-color-primary: #007bff;
+  --fw-color-primary-dark: #0056b3;
+  --fw-color-primary-light: #66b3ff;
+  
+  --fw-color-secondary: #6c757d;
+  --fw-color-secondary-dark: #545b62;
+  --fw-color-secondary-light: #868e96;
+  
+  --fw-color-success: #28a745;
+  --fw-color-success-dark: #1e7e34;
+  --fw-color-success-light: #71dd8a;
+  
+  --fw-color-danger: #dc3545;
+  --fw-color-danger-dark: #bd2130;
+  --fw-color-danger-light: #f1b0b7;
+  
+  --fw-color-warning: #ffc107;
+  --fw-color-warning-dark: #d39e00;
+  --fw-color-warning-light: #ffda6a;
+  
+  --fw-color-info: #17a2b8;
+  --fw-color-info-dark: #117a8b;
+  --fw-color-info-light: #7cc7d0;
+  
+  --fw-color-light: #f8f9fa;
+  --fw-color-light-dark: #e9ecef;
+  --fw-color-light-light: #ffffff;
+  
+  --fw-color-dark: #343a40;
+  --fw-color-dark-dark: #1d2124;
+  --fw-color-dark-light: #495057;
+  
+  /* Grayscale */
+  --fw-color-white: #ffffff;
+  --fw-color-gray-100: #f8f9fa;
+  --fw-color-gray-200: #e9ecef;
+  --fw-color-gray-300: #dee2e6;
+  --fw-color-gray-400: #ced4da;
+  --fw-color-gray-500: #adb5bd;
+  --fw-color-gray-600: #6c757d;
+  --fw-color-gray-700: #495057;
+  --fw-color-gray-800: #343a40;
+  --fw-color-gray-900: #212529;
+  --fw-color-black: #000000;
+  
+  /* Typography */
+  --fw-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fw-font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --fw-font-size-base: 1rem;
+  --fw-font-size-lg: 1.25rem;
+  --fw-font-size-sm: 0.875rem;
+  --fw-font-size-xl: 1.5rem;
+  --fw-font-size-2xl: 2rem;
+  --fw-font-size-3xl: 3rem;
+  --fw-font-size-4xl: 4rem;
+  --fw-font-size-5xl: 5rem;
+  
+  --fw-font-weight-light: 300;
+  --fw-font-weight-normal: 400;
+  --fw-font-weight-medium: 500;
+  --fw-font-weight-semibold: 600;
+  --fw-font-weight-bold: 700;
+  --fw-font-weight-extrabold: 800;
+  
+  --fw-line-height-base: 1.5;
+  --fw-line-height-sm: 1.25;
+  --fw-line-height-lg: 1.75;
+  
+  /* Spacing Scale */
+  --fw-spacing-0: 0;
+  --fw-spacing-1: 0.25rem;
+  --fw-spacing-2: 0.5rem;
+  --fw-spacing-3: 0.75rem;
+  --fw-spacing-4: 1rem;
+  --fw-spacing-5: 1.25rem;
+  --fw-spacing-6: 1.5rem;
+  --fw-spacing-8: 2rem;
+  --fw-spacing-10: 2.5rem;
+  --fw-spacing-12: 3rem;
+  --fw-spacing-16: 4rem;
+  --fw-spacing-20: 5rem;
+  --fw-spacing-24: 6rem;
+  --fw-spacing-32: 8rem;
+  
+  /* Border Radius */
+  --fw-border-radius-sm: 0.25rem;
+  --fw-border-radius: 0.375rem;
+  --fw-border-radius-md: 0.5rem;
+  --fw-border-radius-lg: 0.75rem;
+  --fw-border-radius-xl: 1rem;
+  --fw-border-radius-2xl: 1.5rem;
+  --fw-border-radius-full: 9999px;
+  --fw-border-radius-pill: 50rem;
+  
+  /* Shadows */
+  --fw-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --fw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --fw-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --fw-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --fw-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --fw-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --fw-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Z-index */
+  --fw-z-index-dropdown: 1000;
+  --fw-z-index-sticky: 1020;
+  --fw-z-index-fixed: 1030;
+  --fw-z-index-modal-backdrop: 1040;
+  --fw-z-index-modal: 1050;
+  --fw-z-index-popover: 1060;
+  --fw-z-index-tooltip: 1070;
+  
+  /* Breakpoints */
+  --fw-breakpoint-sm: 576px;
+  --fw-breakpoint-md: 768px;
+  --fw-breakpoint-lg: 992px;
+  --fw-breakpoint-xl: 1200px;
+  
+  /* Container Max Widths */
+  --fw-container-sm: 540px;
+  --fw-container-md: 720px;
+  --fw-container-lg: 960px;
+  --fw-container-xl: 1140px;
+  
+  /* Transitions */
+  --fw-transition-base: all 0.15s ease-in-out;
+  --fw-transition-fade: opacity 0.15s linear;
+  --fw-transition-collapse: height 0.35s ease;
+  
+  /* Component Specific */
+  --fw-btn-padding-y: 0.375rem;
+  --fw-btn-padding-x: 0.75rem;
+  --fw-btn-font-size: 1rem;
+  --fw-btn-line-height: 1.5;
+  
+  --fw-btn-padding-y-sm: 0.25rem;
+  --fw-btn-padding-x-sm: 0.5rem;
+  --fw-btn-font-size-sm: 0.875rem;
+  
+  --fw-btn-padding-y-lg: 0.5rem;
+  --fw-btn-padding-x-lg: 1rem;
+  --fw-btn-font-size-lg: 1.25rem;
+  
+  --fw-btn-border-width: 1px;
+  --fw-btn-border-radius: var(--fw-border-radius);
+  --fw-btn-border-radius-sm: var(--fw-border-radius-sm);
+  --fw-btn-border-radius-lg: var(--fw-border-radius-lg);
+  
+  --fw-input-padding-y: 0.375rem;
+  --fw-input-padding-x: 0.75rem;
+  --fw-input-font-size: 1rem;
+  --fw-input-line-height: 1.5;
+  --fw-input-border-width: 1px;
+  --fw-input-border-radius: var(--fw-border-radius);
+  --fw-input-border-color: var(--fw-color-gray-300);
+  --fw-input-focus-border-color: var(--fw-color-primary);
+  --fw-input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
+  /* Dark Mode Semantic Variables */
+  --fw-bg: var(--fw-color-white);
+  --fw-text: var(--fw-color-dark);
+  --fw-border: var(--fw-color-gray-300);
+  --fw-surface: var(--fw-color-light);
+}
+
+/* Dark Mode Override */
+[data-theme="dark"] {
+  --fw-bg: var(--fw-color-gray-900);
+  --fw-text: var(--fw-color-gray-100);
+  --fw-border: var(--fw-color-gray-600);
+  --fw-surface: var(--fw-color-gray-800);
+}

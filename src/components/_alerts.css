@@ -1,0 +1,276 @@
+/* FrameworkX Alerts */
+
+.fw-alert {
+  position: relative;
+  padding: var(--fw-spacing-4);
+  margin-bottom: var(--fw-spacing-4);
+  border: 1px solid var(--fw-border);
+  border-radius: var(--fw-border-radius);
+}
+
+.fw-alert-heading {
+  color: inherit;
+}
+
+.fw-alert-link {
+  font-weight: var(--fw-font-weight-bold);
+}
+
+.fw-alert-dismissible {
+  padding-right: 3rem;
+}
+
+.fw-alert-dismissible .fw-btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: var(--fw-spacing-4);
+}
+
+/* Primary alert */
+.fw-alert-primary {
+  color: #084298;
+  background-color: #cfe2ff;
+  border-color: #b6d4fe;
+}
+
+.fw-alert-primary .fw-alert-link {
+  color: #06357a;
+}
+
+/* Secondary alert */
+.fw-alert-secondary {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+.fw-alert-secondary .fw-alert-link {
+  color: #202326;
+}
+
+/* Success alert */
+.fw-alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.fw-alert-success .fw-alert-link {
+  color: #0c4128;
+}
+
+/* Danger alert */
+.fw-alert-danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+.fw-alert-danger .fw-alert-link {
+  color: #6a1a21;
+}
+
+/* Warning alert */
+.fw-alert-warning {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+
+.fw-alert-warning .fw-alert-link {
+  color: #523e02;
+}
+
+/* Info alert */
+.fw-alert-info {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+
+.fw-alert-info .fw-alert-link {
+  color: #04414d;
+}
+
+/* Light alert */
+.fw-alert-light {
+  color: #636464;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
+}
+
+.fw-alert-light .fw-alert-link {
+  color: #4f5050;
+}
+
+/* Dark alert */
+.fw-alert-dark {
+  color: #141619;
+  background-color: #d3d3d4;
+  border-color: #bcbebf;
+}
+
+.fw-alert-dark .fw-alert-link {
+  color: #101214;
+}
+
+/* Alert variants with CSS variables */
+.fw-alert {
+  --fw-alert-bg: transparent;
+  --fw-alert-padding-x: var(--fw-spacing-4);
+  --fw-alert-padding-y: var(--fw-spacing-4);
+  --fw-alert-margin-bottom: var(--fw-spacing-4);
+  --fw-alert-border-color: transparent;
+  --fw-alert-border: 1px solid var(--fw-alert-border-color);
+  --fw-alert-border-radius: var(--fw-border-radius);
+  --fw-alert-link-color: inherit;
+  --fw-alert-bg-color: #fff;
+  --fw-alert-text-color: inherit;
+}
+
+.fw-alert {
+  padding: var(--fw-alert-padding-y) var(--fw-alert-padding-x);
+  margin-bottom: var(--fw-alert-margin-bottom);
+  border: var(--fw-alert-border);
+  border-radius: var(--fw-alert-border-radius);
+  background-color: var(--fw-alert-bg);
+  color: var(--fw-alert-text-color);
+}
+
+.fw-alert-primary {
+  --fw-alert-bg: #cfe2ff;
+  --fw-alert-border-color: #b6d4fe;
+  --fw-alert-text-color: #084298;
+  --fw-alert-link-color: #06357a;
+}
+
+.fw-alert-secondary {
+  --fw-alert-bg: #e2e3e5;
+  --fw-alert-border-color: #d6d8db;
+  --fw-alert-text-color: #383d41;
+  --fw-alert-link-color: #202326;
+}
+
+.fw-alert-success {
+  --fw-alert-bg: #d1e7dd;
+  --fw-alert-border-color: #badbcc;
+  --fw-alert-text-color: #0f5132;
+  --fw-alert-link-color: #0c4128;
+}
+
+.fw-alert-danger {
+  --fw-alert-bg: #f8d7da;
+  --fw-alert-border-color: #f5c2c7;
+  --fw-alert-text-color: #842029;
+  --fw-alert-link-color: #6a1a21;
+}
+
+.fw-alert-warning {
+  --fw-alert-bg: #fff3cd;
+  --fw-alert-border-color: #ffecb5;
+  --fw-alert-text-color: #664d03;
+  --fw-alert-link-color: #523e02;
+}
+
+.fw-alert-info {
+  --fw-alert-bg: #cff4fc;
+  --fw-alert-border-color: #b6effb;
+  --fw-alert-text-color: #055160;
+  --fw-alert-link-color: #04414d;
+}
+
+.fw-alert-light {
+  --fw-alert-bg: #fefefe;
+  --fw-alert-border-color: #fdfdfe;
+  --fw-alert-text-color: #636464;
+  --fw-alert-link-color: #4f5050;
+}
+
+.fw-alert-dark {
+  --fw-alert-bg: #d3d3d4;
+  --fw-alert-border-color: #bcbebf;
+  --fw-alert-text-color: #141619;
+  --fw-alert-link-color: #101214;
+}
+
+.fw-alert .fw-alert-link {
+  color: var(--fw-alert-link-color);
+  font-weight: var(--fw-font-weight-bold);
+}
+
+/* Additional alert utilities */
+.fw-alert-solid-primary {
+  background-color: var(--fw-color-primary);
+  border-color: var(--fw-color-primary);
+  color: var(--fw-color-light);
+}
+
+.fw-alert-solid-secondary {
+  background-color: var(--fw-color-secondary);
+  border-color: var(--fw-color-secondary);
+  color: var(--fw-color-light);
+}
+
+.fw-alert-solid-success {
+  background-color: var(--fw-color-success);
+  border-color: var(--fw-color-success);
+  color: var(--fw-color-light);
+}
+
+.fw-alert-solid-danger {
+  background-color: var(--fw-color-danger);
+  border-color: var(--fw-color-danger);
+  color: var(--fw-color-light);
+}
+
+.fw-alert-solid-warning {
+  background-color: var(--fw-color-warning);
+  border-color: var(--fw-color-warning);
+  color: var(--fw-color-dark);
+}
+
+.fw-alert-solid-info {
+  background-color: var(--fw-color-info);
+  border-color: var(--fw-color-info);
+  color: var(--fw-color-light);
+}
+
+.fw-alert-solid-light {
+  background-color: var(--fw-color-light);
+  border-color: var(--fw-color-light);
+  color: var(--fw-color-dark);
+}
+
+.fw-alert-solid-dark {
+  background-color: var(--fw-color-dark);
+  border-color: var(--fw-color-dark);
+  color: var(--fw-color-light);
+}
+
+/* Alert with icons */
+.fw-alert-icon {
+  display: flex;
+  align-items: flex-start;
+}
+
+.fw-alert-icon .fw-alert-icon-wrapper {
+  margin-right: var(--fw-spacing-3);
+  flex-shrink: 0;
+}
+
+.fw-alert-icon .fw-alert-content {
+  flex: 1;
+}
+
+/* Alert sizes */
+.fw-alert-sm {
+  padding: var(--fw-spacing-2) var(--fw-spacing-3);
+  font-size: var(--fw-font-size-sm);
+}
+
+.fw-alert-lg {
+  padding: var(--fw-spacing-5) var(--fw-spacing-6);
+  font-size: var(--fw-font-size-lg);
+}
