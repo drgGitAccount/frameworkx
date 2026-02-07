@@ -2,54 +2,54 @@
 
 :root {
   /* Colors */
-  --fw-color-primary: #007bff;
-  --fw-color-primary-dark: #0056b3;
-  --fw-color-primary-light: #66b3ff;
+  --fw-color-primary: #4AD0CD;
+  --fw-color-primary-dark: #1E9B9B;
+  --fw-color-primary-light: #8FE9E6;
   
-  --fw-color-secondary: #6c757d;
-  --fw-color-secondary-dark: #545b62;
-  --fw-color-secondary-light: #868e96;
+  --fw-color-secondary: #5c6470;
+  --fw-color-secondary-dark: #3e454f;
+  --fw-color-secondary-light: #7b8390;
   
-  --fw-color-success: #28a745;
-  --fw-color-success-dark: #1e7e34;
-  --fw-color-success-light: #71dd8a;
+  --fw-color-success: #2fb7a4;
+  --fw-color-success-dark: #1b887b;
+  --fw-color-success-light: #7fdad0;
   
-  --fw-color-danger: #dc3545;
-  --fw-color-danger-dark: #bd2130;
-  --fw-color-danger-light: #f1b0b7;
+  --fw-color-danger: #e0545d;
+  --fw-color-danger-dark: #b63a43;
+  --fw-color-danger-light: #f3a9ad;
   
-  --fw-color-warning: #ffc107;
-  --fw-color-warning-dark: #d39e00;
-  --fw-color-warning-light: #ffda6a;
+  --fw-color-warning: #ffb454;
+  --fw-color-warning-dark: #d6923a;
+  --fw-color-warning-light: #ffd7a1;
   
-  --fw-color-info: #17a2b8;
-  --fw-color-info-dark: #117a8b;
-  --fw-color-info-light: #7cc7d0;
+  --fw-color-info: #3aaed8;
+  --fw-color-info-dark: #247b99;
+  --fw-color-info-light: #98d8f0;
   
-  --fw-color-light: #f8f9fa;
-  --fw-color-light-dark: #e9ecef;
+  --fw-color-light: #f7f3ee;
+  --fw-color-light-dark: #efe7df;
   --fw-color-light-light: #ffffff;
   
-  --fw-color-dark: #343a40;
-  --fw-color-dark-dark: #1d2124;
-  --fw-color-dark-light: #495057;
+  --fw-color-dark: #1b1f2a;
+  --fw-color-dark-dark: #12151d;
+  --fw-color-dark-light: #2c3340;
   
   /* Grayscale */
   --fw-color-white: #ffffff;
-  --fw-color-gray-100: #f8f9fa;
-  --fw-color-gray-200: #e9ecef;
-  --fw-color-gray-300: #dee2e6;
-  --fw-color-gray-400: #ced4da;
-  --fw-color-gray-500: #adb5bd;
-  --fw-color-gray-600: #6c757d;
-  --fw-color-gray-700: #495057;
-  --fw-color-gray-800: #343a40;
-  --fw-color-gray-900: #212529;
+  --fw-color-gray-100: #f5f1ec;
+  --fw-color-gray-200: #e9e1d8;
+  --fw-color-gray-300: #d9d1c8;
+  --fw-color-gray-400: #c3bbb3;
+  --fw-color-gray-500: #9d9891;
+  --fw-color-gray-600: #6f746f;
+  --fw-color-gray-700: #4a4f57;
+  --fw-color-gray-800: #2b3038;
+  --fw-color-gray-900: #1f232b;
   --fw-color-black: #000000;
   
   /* Typography */
-  --fw-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fw-font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --fw-font-family-base: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fw-font-family-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   
   --fw-font-size-base: 1rem;
   --fw-font-size-lg: 1.25rem;
@@ -98,12 +98,12 @@
   --fw-border-radius-pill: 50rem;
   
   /* Shadows */
-  --fw-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --fw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --fw-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --fw-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --fw-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --fw-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --fw-shadow-sm: 0 1px 2px 0 rgba(27, 31, 42, 0.06);
+  --fw-shadow: 0 2px 6px 0 rgba(27, 31, 42, 0.1);
+  --fw-shadow-md: 0 6px 12px -2px rgba(27, 31, 42, 0.12);
+  --fw-shadow-lg: 0 12px 20px -4px rgba(27, 31, 42, 0.15);
+  --fw-shadow-xl: 0 18px 30px -6px rgba(27, 31, 42, 0.2);
+  --fw-shadow-2xl: 0 28px 55px -12px rgba(27, 31, 42, 0.28);
   --fw-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   
   /* Z-index */
@@ -159,7 +159,7 @@
   --fw-input-border-radius: var(--fw-border-radius);
   --fw-input-border-color: var(--fw-color-gray-300);
   --fw-input-focus-border-color: var(--fw-color-primary);
-  --fw-input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  --fw-input-focus-box-shadow: 0 0 0 0.2rem rgba(74, 208, 205, 0.25);
   
   /* Dark Mode Semantic Variables */
   --fw-bg: var(--fw-color-white);

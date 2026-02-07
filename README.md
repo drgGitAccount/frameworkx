@@ -1,4 +1,4 @@
-# FrameworkX
+﻿# VisualUI
 
 A production-ready CSS framework that combines the best of Bootstrap and Tailwind CSS, offering a hybrid approach with both component-based and utility-first classes.
 
@@ -16,19 +16,19 @@ A production-ready CSS framework that combines the best of Bootstrap and Tailwin
 ### CDN
 ```html
 <!-- CSS -->
-<link href="https://unpkg.com/frameworkx@1.0.0/dist/frameworkx.min.css" rel="stylesheet">
+<link href="https://unpkg.com/VisualUI@1.0.0/dist/VisualUI.min.css" rel="stylesheet">
 
 <!-- JavaScript -->
-<script src="https://unpkg.com/frameworkx@1.0.0/dist/frameworkx.min.js"></script>
+<script src="https://unpkg.com/VisualUI@1.0.0/dist/VisualUI.min.js"></script>
 ```
 
 ### NPM
 ```bash
-npm install frameworkx
+npm install VisualUI
 ```
 
 ### Download
-Download the latest release from [GitHub](https://github.com/frameworkx/frameworkx/releases).
+Download the latest release from [GitHub](https://github.com/VisualUI/VisualUI/releases).
 
 ## 🎯 Quick Start
 
@@ -39,15 +39,15 @@ Download the latest release from [GitHub](https://github.com/frameworkx/framewor
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrameworkX Example</title>
-    <link href="dist/frameworkx.min.css" rel="stylesheet">
+    <title>VisualUI Example</title>
+    <link href="dist/VisualUI.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="fw-container">
-        <h1 class="fw-font-weight-bold">Hello FrameworkX!</h1>
+        <h1 class="fw-font-weight-bold">Hello VisualUI!</h1>
         <button class="fw-btn fw-btn-primary">Primary Button</button>
     </div>
-    <script src="dist/frameworkx.min.js"></script>
+    <script src="dist/VisualUI.min.js"></script>
 </body>
 </html>
 ```
@@ -126,8 +126,8 @@ Download the latest release from [GitHub](https://github.com/frameworkx/framewor
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/frameworkx/frameworkx.git
-cd frameworkx
+git clone https://github.com/VisualUI/VisualUI.git
+cd VisualUI
 
 # Install dependencies
 npm install
@@ -150,7 +150,7 @@ npm run watch
 
 ### Project Structure
 ```
-frameworkx/
+VisualUI/
 ├── src/
 │   ├── core/           # Core CSS files
 │   ├── components/     # Component CSS
@@ -158,7 +158,7 @@ frameworkx/
 │   ├── responsive/     # Responsive CSS
 │   ├── utilities/      # Utility CSS
 │   ├── js/            # JavaScript files
-│   └── frameworkx.css # Main entry point
+│   └── VisualUI.css # Main entry point
 ├── dist/              # Built files
 ├── docs/              # Documentation
 ├── examples/          # Example pages
@@ -169,7 +169,7 @@ frameworkx/
 ## 🎨 Customization
 
 ### CSS Variables
-FrameworkX uses CSS variables for easy theming:
+VisualUI uses CSS variables for easy theming:
 
 ```css
 :root {
@@ -182,7 +182,7 @@ FrameworkX uses CSS variables for easy theming:
 ```
 
 ### Custom Build
-Create a custom build by modifying the import order in `src/frameworkx.css`:
+Create a custom build by modifying the import order in `src/VisualUI.css`:
 
 ```css
 @import url("core/_reset.css");
@@ -218,10 +218,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- [GitHub Issues](https://github.com/frameworkx/frameworkx/issues)
-- [Documentation](https://frameworkx.dev)
-- [Discord Community](https://discord.gg/frameworkx)
+- [GitHub Issues](https://github.com/VisualUI/VisualUI/issues)
+- [Documentation](https://VisualUI.dev)
+- [Discord Community](https://discord.gg/VisualUI)
 
 ---
 
-**FrameworkX** - Build beautiful websites faster. 🚀
+**VisualUI** - Build beautiful websites faster. 🚀
+

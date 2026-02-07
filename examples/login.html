@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - FrameworkX</title>
-    <link href="../src/frameworkx.css" rel="stylesheet">
+    <title>Login - VisualUI</title>
+    <link href="../src/VisualUI.css" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -58,7 +58,7 @@
             }
         }
     </style>
-</head>
+    <link href="../docs/docs-theme.css" rel="stylesheet"></head>
 <body>
     <div class="login-container">
         <div class="fw-row g-0">
@@ -66,7 +66,7 @@
             <div class="fw-col-md-6">
                 <div class="login-left">
                     <h2 class="mb-4">Welcome Back!</h2>
-                    <p class="mb-4">FrameworkX provides everything you need to build beautiful, responsive web applications.</p>
+                    <p class="mb-4">VisualUI provides everything you need to build beautiful, responsive web applications.</p>
                     
                     <div class="feature-item">
                         <div class="feature-icon">
@@ -218,7 +218,7 @@
             // Simple validation (in real app, this would be server-side)
             if (email && password) {
                 // Show success modal
-                const modal = new FrameworkX.Modal(document.getElementById('successModal'));
+                const modal = new VisualUI.Modal(document.getElementById('successModal'));
                 modal.show();
                 
                 // Reset form
@@ -250,3 +250,6 @@
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
+
+
+
