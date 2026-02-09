@@ -358,7 +358,8 @@ footer.fw-footer {
 /* Container */
 .fw-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 1.5rem;
 }
 
@@ -447,6 +448,11 @@ footer.fw-footer {
         grid-column: span 6;
     }
 
+    .fw-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .sidebar-nav {
         position: static;
         top: auto;
@@ -475,6 +481,8 @@ footer.fw-footer {
     }
 
     .fw-container {
+        margin-left: auto;
+        margin-right: auto;
         padding: 0 1rem;
     }
 
