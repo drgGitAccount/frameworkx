@@ -14,6 +14,183 @@
         .content-section {
             scroll-margin-top: 2rem;
         }
+        .sidebar-nav .nav-link {
+            color: var(--fw-color-secondary);
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 0.35rem 0.6rem;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar-nav .nav-link:hover,
+        .sidebar-nav .nav-link:focus {
+            color: var(--fw-color-dark);
+            background: rgba(74, 208, 205, 0.15);
+        }
+        .form-demo {
+            display: grid;
+            gap: 1.25rem;
+        }
+        .form-demo .input-icon {
+            background: var(--fw-color-white);
+            border: 1px solid var(--fw-color-gray-200);
+            border-radius: 14px;
+            padding: 0;
+        }
+        .input-icon {
+            position: relative;
+        }
+        .input-icon .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(74, 208, 205, 0.2), rgba(30, 155, 155, 0.12));
+            border: 1px solid rgba(74, 208, 205, 0.35);
+            color: var(--fw-color-dark);
+            font-weight: 600;
+            pointer-events: none;
+        }
+        .input-icon .icon-left {
+            left: 4px;
+        }
+        .input-icon .icon-right {
+            right: 4px;
+        }
+        .input-icon .fw-form-control {
+            padding-left: 60px;
+            min-height: 38px;
+            border-radius: 12px;
+            border-color: transparent;
+            background: transparent;
+            box-shadow: none;
+            height: 38px;
+            line-height: 38px;
+        }
+        .input-icon.has-right .fw-form-control {
+            padding-right: 60px;
+        }
+        .inline-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        .inline-form .fw-form-control,
+        .inline-form .fw-form-select {
+            width: auto;
+            min-width: 200px;
+        }
+        .search-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            background: var(--fw-color-light);
+            border: 1px solid var(--fw-color-gray-200);
+            border-radius: 14px;
+            padding: 0.85rem 1rem;
+        }
+        .search-demo .input-icon {
+            flex: 1 1 240px;
+        }
+        .search-demo .fw-form-control,
+        .search-demo .fw-btn {
+            min-height: 44px;
+        }
+        .search-demo .fw-btn {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .search-variant {
+            display: grid;
+            gap: 0.75rem;
+        }
+        .search-variant.inline {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--fw-color-gray-200);
+            background: var(--fw-color-white);
+            border-radius: 999px;
+            padding: 0.4rem 0.6rem;
+        }
+        .search-variant.inline .fw-form-control {
+            border-color: transparent;
+            background: transparent;
+            box-shadow: none;
+            height: 38px;
+            line-height: 38px;
+            min-width: 220px;
+        }
+        .search-variant.card {
+            border: 1px solid var(--fw-color-gray-200);
+            background: var(--fw-color-white);
+            border-radius: 14px;
+            padding: 0.75rem;
+        }
+        .search-variant.split {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .search-variant.split .fw-form-control {
+            flex: 1 1 220px;
+        }
+        .search-demo .fw-btn {
+            white-space: nowrap;
+        }
+        /* Ensure modal demo overlays correctly in docs */
+        #modal {
+            animation: none;
+            transform: none;
+        }
+        /* Ensure drawer demo is fixed to viewport */
+        #drawer {
+            animation: none;
+            transform: none;
+        }
+        .fw-modal {
+            z-index: 2000;
+        }
+        .fw-modal-backdrop {
+            z-index: 1990;
+        }
+        .modal-demo-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+        .modal-demo-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .modal-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .modal-bottom {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .modal-top .fw-modal-dialog,
+        .modal-bottom .fw-modal-dialog {
+            margin: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .inline-form .fw-form-control,
+            .inline-form .fw-form-select {
+                width: 100%;
+            }
+        }
     </style>
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
@@ -46,9 +223,11 @@
                                 <a class="nav-link" href="#alerts">Alerts</a>
                                 <a class="nav-link" href="#badges">Badges</a>
                                 <a class="nav-link" href="#buttons">Buttons</a>
+                                <a class="nav-link" href="#grid">Grid</a>
                                 <a class="nav-link" href="#cards">Cards</a>
                                 <a class="nav-link" href="#forms">Forms</a>
                                 <a class="nav-link" href="#modal">Modal</a>
+                                <a class="nav-link" href="#drawer">Drawer</a>
                                 <a class="nav-link" href="#header">Header</a>
                                 <a class="nav-link" href="#footer">Footer</a>
                                 <a class="nav-link" href="#sidebar">Sidebar</a>
@@ -173,6 +352,51 @@
                     </div>
                 </section>
 
+                <!-- Grid -->
+                <section id="grid" class="content-section mb-5">
+                    <h1>Grid System</h1>
+                    <p class="lead">Build responsive layouts with containers, rows, and 12-column spans. Gutters are handled automatically by rows and columns.</p>
+
+                    <h3>Classes</h3>
+                    <p>Use these core layout classes throughout your layouts:</p>
+                    <ul>
+                        <li><code>fw-container</code>, <code>fw-container-fluid</code>, <code>fw-container-sm</code>, <code>fw-container-md</code>, <code>fw-container-lg</code>, <code>fw-container-xl</code></li>
+                        <li><code>fw-row</code></li>
+                        <li><code>fw-col</code>, <code>fw-col-auto</code>, <code>fw-col-1</code> through <code>fw-col-12</code></li>
+                        <li><code>fw-col-sm</code>, <code>fw-col-md</code>, <code>fw-col-lg</code>, <code>fw-col-xl</code></li>
+                        <li><code>fw-col-sm-*</code>, <code>fw-col-md-*</code>, <code>fw-col-lg-*</code>, <code>fw-col-xl-*</code></li>
+                    </ul>
+
+                    <h3>Responsive Example</h3>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <div class="fw-row">
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Responsive Column</div>
+                                </div>
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Responsive Column</div>
+                                </div>
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Responsive Column</div>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-0">Columns stack on small screens, split at <code>md</code>, and show three across at <code>lg</code>.</p>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;div class="fw-container"&gt;
+  &lt;div class="fw-row"&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;...&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
                 <!-- Cards -->
                 <section id="cards" class="content-section mb-5">
                     <h1>Cards</h1>
@@ -201,7 +425,7 @@
                         </div>
                         <div class="fw-col-md-6 mb-4">
                             <div class="fw-card">
-                                <img src="https://via.placeholder.com/300x200" class="fw-card-img-top" alt="Card image">
+                                <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-card-img-top" alt="Card image">
                                 <div class="fw-card-body">
                                     <p class="fw-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
@@ -279,11 +503,84 @@
                         </div>
                     </div>
 
+                    <h3>Inputs With Icons</h3>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <div class="form-demo">
+                                <div class="input-icon">
+                                    <span class="icon icon-left">@</span>
+                                    <input type="email" class="fw-form-control" placeholder="Email address">
+                                </div>
+                                <div class="input-icon has-right">
+                                    <span class="icon icon-left">#</span>
+                                    <span class="icon icon-right">OK</span>
+                                    <input type="text" class="fw-form-control" placeholder="Account ID">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Inline Form</h3>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <form class="inline-form">
+                                <input type="text" class="fw-form-control" placeholder="First name">
+                                <input type="email" class="fw-form-control" placeholder="Email">
+                                <select class="fw-form-select">
+                                    <option selected>Role</option>
+                                    <option>Designer</option>
+                                    <option>Engineer</option>
+                                    <option>Manager</option>
+                                </select>
+                                <button type="submit" class="fw-btn fw-btn-primary">Invite</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <h3>Search Input</h3>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <div class="form-demo">
+                                <form class="search-demo">
+                                    <div class="input-icon">
+                                        <span class="icon icon-left">S</span>
+                                        <input type="search" class="fw-form-control" placeholder="Search components, utilities, docs">
+                                    </div>
+                                    <button type="submit" class="fw-btn fw-btn-primary">Search</button>
+                                    <button type="button" class="fw-btn fw-btn-outline-primary">Filters</button>
+                                </form>
+                                <form class="search-variant card">
+                                    <div class="search-variant split">
+                                        <div class="input-icon">
+                                            <span class="icon icon-left">S</span>
+                                            <input type="search" class="fw-form-control" placeholder="Search by keyword">
+                                        </div>
+                                        <select class="fw-form-select" style="min-width: 160px;">
+                                            <option selected>All categories</option>
+                                            <option>Components</option>
+                                            <option>Utilities</option>
+                                            <option>Layout</option>
+                                        </select>
+                                        <button type="submit" class="fw-btn fw-btn-primary">Search</button>
+                                    </div>
+                                </form>
+                                <form class="search-variant split">
+                                    <div class="input-icon">
+                                        <span class="icon icon-left">S</span>
+                                        <input type="search" class="fw-form-control" placeholder="Search with quick actions">
+                                    </div>
+                                    <button type="button" class="fw-btn fw-btn-outline-primary">Recent</button>
+                                    <button type="submit" class="fw-btn fw-btn-primary">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <h3>Code</h3>
                     <div class="code-block">
                         <pre>&lt;div class="mb-3"&gt;
-    &lt;label for="exampleInputEmail1" class="fw-form-label"&gt;Email address&lt;/label&gt;
-    &lt;input type="email" class="fw-form-control" id="exampleInputEmail1" placeholder="name@example.com"&gt;
+      &lt;label for="exampleInputEmail1" class="fw-form-label"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" class="fw-form-control" id="exampleInputEmail1" placeholder="name@example.com"&gt;
 &lt;/div&gt;</pre>
                     </div>
                 </section>
@@ -293,25 +590,214 @@
                     <h1>Modal</h1>
                     <p class="lead">Use FrameworkX's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
 
-                    <h3>Live Demo</h3>
-                    <button type="button" class="fw-btn fw-btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
-                    </button>
+                    <h3>Sizes</h3>
+                    <div class="modal-demo-row">
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalSm">Small</button>
+                        <button type="button" class="fw-btn fw-btn-primary" data-toggle="modal" data-target="#modalDefault">Default</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalLg">Large</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalXl">Extra Large</button>
+                    </div>
 
-                    <!-- Modal -->
-                    <div class="fw-modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="fw-modal-dialog">
+                    <h3>Positions</h3>
+                    <div class="modal-demo-row">
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalCentered">Centered</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalTop">Top</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalBottom">Bottom</button>
+                    </div>
+
+                    <h3>Behaviors</h3>
+                    <div class="modal-demo-row">
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalScrollable">Scrollable</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalFullscreen">Fullscreen</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="modal" data-target="#modalFullscreenMd">Fullscreen (md down)</button>
+                    </div>
+
+                    <!-- Size Modals -->
+                    <div class="fw-modal fade" id="modalSm" tabindex="-1" aria-labelledby="modalSmLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-sm">
                             <div class="fw-modal-content">
                                 <div class="fw-modal-header">
-                                    <h5 class="fw-modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="fw-modal-title" id="modalSmLabel">Small modal</h5>
                                     <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="fw-modal-body">
-                                    <p>Modal body text goes here.</p>
+                                    <p>Compact dialog for quick confirmations.</p>
                                 </div>
                                 <div class="fw-modal-footer">
                                     <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="fw-btn fw-btn-primary">Save changes</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade" id="modalDefault" tabindex="-1" aria-labelledby="modalDefaultLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-dialog-centered">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalDefaultLabel">Default modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Standard modal size for most use cases.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade" id="modalLg" tabindex="-1" aria-labelledby="modalLgLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-lg">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalLgLabel">Large modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Extra space for complex forms or multi-column layouts.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade" id="modalXl" tabindex="-1" aria-labelledby="modalXlLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-xl">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalXlLabel">Extra large modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Perfect for detailed dashboards or data tables.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position Modals -->
+                    <div class="fw-modal fade" id="modalCentered" tabindex="-1" aria-labelledby="modalCenteredLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-dialog-centered">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalCenteredLabel">Centered modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>This dialog is vertically centered in the viewport.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Got it</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade modal-top" id="modalTop" tabindex="-1" aria-labelledby="modalTopLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalTopLabel">Top modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Positioned near the top for quick notices.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade modal-bottom" id="modalBottom" tabindex="-1" aria-labelledby="modalBottomLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalBottomLabel">Bottom modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Anchored to the bottom for sheet-like interactions.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Behavior Modals -->
+                    <div class="fw-modal fade" id="modalScrollable" tabindex="-1" aria-labelledby="modalScrollableLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog fw-modal-dialog-scrollable">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalScrollableLabel">Scrollable modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Scrollable content with a fixed header and footer.</p>
+                                    <p>Line 1: Additional content for scrolling.</p>
+                                    <p>Line 2: Additional content for scrolling.</p>
+                                    <p>Line 3: Additional content for scrolling.</p>
+                                    <p>Line 4: Additional content for scrolling.</p>
+                                    <p>Line 5: Additional content for scrolling.</p>
+                                    <p>Line 6: Additional content for scrolling.</p>
+                                    <p>Line 7: Additional content for scrolling.</p>
+                                    <p>Line 8: Additional content for scrolling.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade fw-modal-fullscreen" id="modalFullscreen" tabindex="-1" aria-labelledby="modalFullscreenLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalFullscreenLabel">Fullscreen modal</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>This modal fills the entire viewport.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-modal fade fw-modal-fullscreen-md-down" id="modalFullscreenMd" tabindex="-1" aria-labelledby="modalFullscreenMdLabel" aria-hidden="true">
+                        <div class="fw-modal-dialog">
+                            <div class="fw-modal-content">
+                                <div class="fw-modal-header">
+                                    <h5 class="fw-modal-title" id="modalFullscreenMdLabel">Fullscreen (md down)</h5>
+                                    <button type="button" class="fw-btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="fw-modal-body">
+                                    <p>Fullscreen on small devices, standard modal on larger screens.</p>
+                                </div>
+                                <div class="fw-modal-footer">
+                                    <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="fw-btn fw-btn-primary">Continue</button>
                                 </div>
                             </div>
                         </div>
@@ -319,28 +805,120 @@
 
                     <h3>Code</h3>
                     <div class="code-block">
-                        <pre>&lt;!-- Button trigger --&gt;
-&lt;button type="button" class="fw-btn fw-btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
-    Launch demo modal
-&lt;/button&gt;
+                        <pre>&lt;!-- Sizes --&gt;
+&lt;div class="fw-modal fade" id="modalLg"&gt;
+  &lt;div class="fw-modal-dialog fw-modal-lg"&gt;...&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;!-- Modal --&gt;
-&lt;div class="fw-modal fade" id="exampleModal" tabindex="-1"&gt;
-    &lt;div class="fw-modal-dialog"&gt;
-        &lt;div class="fw-modal-content"&gt;
-            &lt;div class="fw-modal-header"&gt;
-                &lt;h5 class="fw-modal-title"&gt;Modal title&lt;/h5&gt;
-                &lt;button type="button" class="fw-btn-close" data-dismiss="modal"&gt;&lt;/button&gt;
-            &lt;/div&gt;
-            &lt;div class="fw-modal-body"&gt;
-                &lt;p&gt;Modal body text goes here.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class="fw-modal-footer"&gt;
-                &lt;button type="button" class="fw-btn fw-btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
-                &lt;button type="button" class="fw-btn fw-btn-primary"&gt;Save changes&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+&lt;!-- Positions --&gt;
+&lt;div class="fw-modal fade modal-top" id="modalTop"&gt;
+  &lt;div class="fw-modal-dialog"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Behaviors --&gt;
+&lt;div class="fw-modal fade" id="modalScrollable"&gt;
+  &lt;div class="fw-modal-dialog fw-modal-dialog-scrollable"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fw-modal fade fw-modal-fullscreen" id="modalFullscreen"&gt;...&lt;/div&gt;</pre>
+                    </div>
+                </section>
+
+                <!-- Drawer -->
+                <section id="drawer" class="content-section mb-5">
+                    <h1>Drawer</h1>
+                    <p class="lead">Off-canvas drawers slide in from the edges and are great for navigation, filters, or quick tasks.</p>
+
+                    <h3>Examples</h3>
+                    <div class="modal-demo-row">
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="drawer" data-target="#drawerLeft">Left Drawer</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="drawer" data-target="#drawerRight">Right Drawer</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="drawer" data-target="#drawerTop">Top Drawer</button>
+                        <button type="button" class="fw-btn fw-btn-outline-primary" data-toggle="drawer" data-target="#drawerBottom">Bottom Drawer</button>
+                    </div>
+
+                    <div class="fw-drawer fw-drawer-left" id="drawerLeft" aria-hidden="true">
+                        <div class="fw-drawer-content">
+                            <div class="fw-drawer-header">
+                                <h5 class="fw-drawer-title">Left Drawer</h5>
+                                <button type="button" class="fw-btn-close" data-dismiss="drawer" aria-label="Close"></button>
+                            </div>
+                            <div class="fw-drawer-body">
+                                <p>Use drawers to host navigation, filters, or quick actions.</p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <button class="fw-btn fw-btn-primary">Primary</button>
+                                    <button class="fw-btn fw-btn-outline-primary">Secondary</button>
+                                </div>
+                            </div>
+                            <div class="fw-drawer-footer">
+                                <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="drawer">Close</button>
+                                <button type="button" class="fw-btn fw-btn-primary">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-drawer fw-drawer-right" id="drawerRight" aria-hidden="true">
+                        <div class="fw-drawer-content">
+                            <div class="fw-drawer-header">
+                                <h5 class="fw-drawer-title">Right Drawer</h5>
+                                <button type="button" class="fw-btn-close" data-dismiss="drawer" aria-label="Close"></button>
+                            </div>
+                            <div class="fw-drawer-body">
+                                <p>Perfect for filters or details panels.</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">Filter 1</li>
+                                    <li class="mb-2">Filter 2</li>
+                                    <li>Filter 3</li>
+                                </ul>
+                            </div>
+                            <div class="fw-drawer-footer">
+                                <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="drawer">Close</button>
+                                <button type="button" class="fw-btn fw-btn-primary">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-drawer fw-drawer-top" id="drawerTop" aria-hidden="true">
+                        <div class="fw-drawer-content">
+                            <div class="fw-drawer-header">
+                                <h5 class="fw-drawer-title">Top Drawer</h5>
+                                <button type="button" class="fw-btn-close" data-dismiss="drawer" aria-label="Close"></button>
+                            </div>
+                            <div class="fw-drawer-body">
+                                <p>Use for quick announcements or search.</p>
+                            </div>
+                            <div class="fw-drawer-footer">
+                                <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="drawer">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-drawer fw-drawer-bottom" id="drawerBottom" aria-hidden="true">
+                        <div class="fw-drawer-content">
+                            <div class="fw-drawer-header">
+                                <h5 class="fw-drawer-title">Bottom Drawer</h5>
+                                <button type="button" class="fw-btn-close" data-dismiss="drawer" aria-label="Close"></button>
+                            </div>
+                            <div class="fw-drawer-body">
+                                <p>Great for mobile-first actions or summaries.</p>
+                            </div>
+                            <div class="fw-drawer-footer">
+                                <button type="button" class="fw-btn fw-btn-secondary" data-dismiss="drawer">Close</button>
+                                <button type="button" class="fw-btn fw-btn-primary">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;button class="fw-btn" data-toggle="drawer" data-target="#drawerLeft"&gt;Open&lt;/button&gt;
+&lt;div class="fw-drawer fw-drawer-left" id="drawerLeft"&gt;
+  &lt;div class="fw-drawer-content"&gt;
+    &lt;div class="fw-drawer-header"&gt;
+      &lt;h5 class="fw-drawer-title"&gt;Title&lt;/h5&gt;
+      &lt;button class="fw-btn-close" data-dismiss="drawer"&gt;&lt;/button&gt;
     &lt;/div&gt;
+    &lt;div class="fw-drawer-body"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                     </div>
                 </section>
@@ -542,12 +1120,8 @@
     </footer>
 
     <script src="../src/js/modal.js"></script>
+    <script src="../src/js/drawer.js"></script>
     <script src="../src/js/dropdown.js"></script>
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
-
-
-
-
-

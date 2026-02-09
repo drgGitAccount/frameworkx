@@ -1,0 +1,117 @@
+/* FrameworkX Drawer (Off-canvas) */
+
+.fw-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+.fw-drawer.show {
+  display: block;
+}
+
+.fw-drawer-content {
+  position: absolute;
+  background: var(--fw-color-light);
+  border: 1px solid var(--fw-color-gray-200);
+  box-shadow: var(--fw-shadow-xl);
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+  z-index: 1110;
+}
+
+/* Left / Right */
+.fw-drawer-left .fw-drawer-content {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(80vw, 360px);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.fw-drawer-right .fw-drawer-content {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(80vw, 360px);
+  transform: translate3d(100%, 0, 0);
+}
+
+/* Top / Bottom */
+.fw-drawer-top .fw-drawer-content {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: min(50vh, 320px);
+  transform: translate3d(0, -100%, 0);
+}
+
+.fw-drawer-bottom .fw-drawer-content {
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: min(50vh, 320px);
+  transform: translate3d(0, 100%, 0);
+}
+
+.fw-drawer.show .fw-drawer-content {
+  transform: translate3d(0, 0, 0);
+}
+
+.fw-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--fw-spacing-4);
+  border-bottom: 1px solid var(--fw-color-gray-200);
+}
+
+.fw-drawer-title {
+  margin: 0;
+  font-size: var(--fw-font-size-lg);
+}
+
+.fw-drawer-body {
+  padding: var(--fw-spacing-4);
+  overflow-y: auto;
+}
+
+.fw-drawer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--fw-spacing-3);
+  border-top: 1px solid var(--fw-color-gray-200);
+  gap: var(--fw-spacing-2);
+}
+
+.fw-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1090;
+}
+
+.fw-drawer-backdrop.show {
+  opacity: 1;
+}
+
+body.fw-drawer-open {
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .fw-drawer-left .fw-drawer-content,
+  .fw-drawer-right .fw-drawer-content {
+    width: 100vw;
+  }
+}

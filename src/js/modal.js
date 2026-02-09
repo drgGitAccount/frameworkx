@@ -10,7 +10,7 @@ class Modal {
       backdrop: true,
       keyboard: true,
       focus: true,
-      show: true,
+      show: false,
       ...options
     };
     
@@ -43,7 +43,7 @@ class Modal {
     
     // Click on backdrop
     this.element.addEventListener('click', (e) => {
-      if (e.target === this.element && this.options.backdrop) {
+      if (e.target === this.element && this.options.backdrop && Modal.getTopModal() === this) {
         this.hide();
       }
     });
@@ -51,7 +51,7 @@ class Modal {
     // Escape key
     if (this.options.keyboard) {
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && this.isShown) {
+        if (e.key === 'Escape' && this.isShown && Modal.getTopModal() === this) {
           this.hide();
         }
       });
@@ -67,9 +67,8 @@ class Modal {
     }
     
     // Show modal
-    this.element.style.display = 'block';
+    this.element.style.display = 'flex';
     this.element.classList.add('show');
-    this.element.classList.remove('fade');
     
     // Set focus
     if (this.options.focus) {
@@ -77,6 +76,7 @@ class Modal {
     }
     
     this.isShown = true;
+    Modal.registerOpen(this);
     
     // Trigger show event
     this.triggerEvent('show');
@@ -95,31 +95,24 @@ class Modal {
     
     // Hide modal
     this.element.classList.remove('show');
-    this.element.classList.add('fade');
     
     this.isShown = false;
+    Modal.unregisterOpen(this);
     
     // Trigger hide event
     this.triggerEvent('hide');
     
-    // Remove body class
-    document.body.classList.remove('fw-modal-open');
+    // Remove body class when no modals remain
+    if (Modal.openStack.length === 0) {
+      document.body.classList.remove('fw-modal-open');
+    }
     
     // Hide backdrop
-    if (this.backdropElement) {
-      this.backdropElement.classList.remove('show');
-      setTimeout(() => {
-        if (this.backdropElement) {
-          this.backdropElement.remove();
-          this.backdropElement = null;
-        }
-      }, 150);
-    }
+    this.removeBackdrop();
     
     // Hide modal after animation
     setTimeout(() => {
       this.element.style.display = 'none';
-      this.element.classList.remove('fade');
       
       // Trigger hidden event
       this.triggerEvent('hidden');
@@ -127,8 +120,15 @@ class Modal {
   }
   
   createBackdrop() {
+    const baseBackdropZ = 1040;
+    const baseModalZ = 1050;
+    const index = Modal.openStack.length;
+    this.element.style.zIndex = baseModalZ + index * 20;
+
     this.backdropElement = document.createElement('div');
     this.backdropElement.className = 'fw-modal-backdrop fade';
+    this.backdropElement.dataset.modalId = this.element.id || '';
+    this.backdropElement.style.zIndex = baseBackdropZ + index * 20;
     document.body.appendChild(this.backdropElement);
     
     // Show backdrop
@@ -137,6 +137,16 @@ class Modal {
         this.backdropElement.classList.add('show');
       }
     }, 10);
+  }
+
+  removeBackdrop() {
+    if (!this.backdropElement) return;
+    const backdropToRemove = this.backdropElement;
+    this.backdropElement = null;
+    backdropToRemove.classList.remove('show');
+    setTimeout(() => {
+      backdropToRemove.remove();
+    }, 150);
   }
   
   enforceFocus() {
@@ -185,10 +195,32 @@ class Modal {
   static getOrCreateInstance(element, options = {}) {
     return element._fwModal || new Modal(element, options);
   }
+
+  static registerOpen(instance) {
+    Modal.openStack = Modal.openStack.filter((item) => item !== instance);
+    Modal.openStack.push(instance);
+  }
+
+  static unregisterOpen(instance) {
+    Modal.openStack = Modal.openStack.filter((item) => item !== instance);
+  }
+
+  static getTopModal() {
+    return Modal.openStack[Modal.openStack.length - 1] || null;
+  }
 }
 
 // Auto-initialize modals
 document.addEventListener('DOMContentLoaded', () => {
+  // Ensure all modals are hidden on load
+  document.querySelectorAll('.fw-modal').forEach((modalEl) => {
+    modalEl.classList.remove('show');
+    modalEl.style.display = 'none';
+  });
+  document.body.classList.remove('fw-modal-open');
+  document.querySelectorAll('.fw-modal-backdrop').forEach((backdrop) => backdrop.remove());
+  Modal.openStack = [];
+
   const modalTriggers = document.querySelectorAll('[data-toggle="modal"]');
   
   modalTriggers.forEach(trigger => {

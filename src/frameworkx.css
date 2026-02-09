@@ -27,6 +27,7 @@
 @import url('./components/_badges.css');
 @import url('./components/_alerts.css');
 @import url('./components/_modal.css');
+@import url('./components/_drawer.css');
 
 /* Responsive Utilities */
 @import url('./responsive/_sm.css');

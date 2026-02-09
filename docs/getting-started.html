@@ -44,6 +44,7 @@
                             <h6 class="fw-card-title">Getting Started</h6>
                             <nav class="nav flex-column">
                                 <a class="nav-link" href="#introduction">Introduction</a>
+                                <a class="nav-link" href="#layout-grid">Layout & Grid</a>
                                 <a class="nav-link" href="#download">Download</a>
                                 <a class="nav-link" href="#contents">Contents</a>
                                 <a class="nav-link" href="#browser-support">Browser Support</a>
@@ -72,6 +73,63 @@
                         <li><strong>Lightweight JavaScript</strong> - Optional interactive components like modals and dropdowns</li>
                         <li><strong>Optimized for performance</strong> - Minimal footprint with no external dependencies</li>
                     </ul>
+                </section>
+
+                <!-- Layout & Grid -->
+                <section id="layout-grid" class="content-section mb-5">
+                    <h2>Layout & Grid</h2>
+                    <p>FrameworkX uses a 12-column, mobile-first grid built on containers, rows, and columns. Rows provide negative margins, while columns include padding so gutters are handled automatically.</p>
+
+                    <h3>Containers</h3>
+                    <p>Use a fixed-width container for centered layouts or a fluid container for full-width sections.</p>
+                    <ul>
+                        <li><code>fw-container</code> - responsive fixed-width container</li>
+                        <li><code>fw-container-fluid</code> - full-width container</li>
+                        <li><code>fw-container-sm</code>, <code>fw-container-md</code>, <code>fw-container-lg</code>, <code>fw-container-xl</code> - fixed width starting at each breakpoint</li>
+                    </ul>
+
+                    <h3>Rows</h3>
+                    <ul>
+                        <li><code>fw-row</code> - wraps columns and enables automatic gutters</li>
+                    </ul>
+
+                    <h3>Columns</h3>
+                    <ul>
+                        <li><code>fw-col</code> - equal width, fluid columns</li>
+                        <li><code>fw-col-auto</code> - width based on content</li>
+                        <li><code>fw-col-1</code> through <code>fw-col-12</code> - fixed column spans</li>
+                        <li><code>fw-col-sm-*</code>, <code>fw-col-md-*</code>, <code>fw-col-lg-*</code>, <code>fw-col-xl-*</code> - responsive spans per breakpoint</li>
+                        <li><code>fw-col-sm</code>, <code>fw-col-md</code>, <code>fw-col-lg</code>, <code>fw-col-xl</code> - equal width at each breakpoint</li>
+                    </ul>
+
+                    <h3>Responsive Example</h3>
+                    <p>These columns stack on mobile, split into two on medium screens, and three on large screens.</p>
+                    <div class="fw-card">
+                        <div class="fw-card-body">
+                            <div class="fw-row">
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column A</div>
+                                </div>
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column B</div>
+                                </div>
+                                <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                                    <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column C</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;div class="fw-container"&gt;
+  &lt;div class="fw-row"&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column A&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column B&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column C&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
                 </section>
 
                 <!-- Download -->
@@ -343,7 +401,6 @@ module.exports = {
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
-
 
 
 

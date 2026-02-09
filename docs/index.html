@@ -151,6 +151,76 @@
         </div>
     </section>
 
+    <!-- Grid System -->
+    <section id="grid-system" class="py-5">
+        <div class="fw-container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: bold; color: #1a1a1a; margin-bottom: 1rem;">Grid System</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 0;">Containers, rows, and columns power responsive layouts with automatic gutters.</p>
+            </div>
+
+            <div class="fw-row mb-4">
+                <div class="fw-col-lg-4 mb-3">
+                    <div class="fw-card h-100">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem; color: #1a1a1a;">Containers</h3>
+                            <p style="color: #666; margin-bottom: 0;">Use <code>fw-container</code> for centered layouts or <code>fw-container-fluid</code> for full-width sections.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-lg-4 mb-3">
+                    <div class="fw-card h-100">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem; color: #1a1a1a;">Rows</h3>
+                            <p style="color: #666; margin-bottom: 0;">Wrap columns in <code>fw-row</code>. Rows manage negative margins so gutters align automatically.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-col-lg-4 mb-3">
+                    <div class="fw-card h-100">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem; color: #1a1a1a;">Columns</h3>
+                            <p style="color: #666; margin-bottom: 0;">Use <code>fw-col-*</code> and responsive variants like <code>fw-col-md-6</code> for flexible layouts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <ul style="margin: 0; padding-left: 1.5rem; color: #666;">
+                    <li><code>fw-container</code>, <code>fw-container-fluid</code>, <code>fw-container-sm</code>, <code>fw-container-md</code>, <code>fw-container-lg</code>, <code>fw-container-xl</code></li>
+                    <li><code>fw-row</code></li>
+                    <li><code>fw-col</code>, <code>fw-col-auto</code>, <code>fw-col-1</code> through <code>fw-col-12</code>, <code>fw-col-sm</code>/<code>md</code>/<code>lg</code>/<code>xl</code>, plus responsive <code>fw-col-sm-*</code>, <code>fw-col-md-*</code>, <code>fw-col-lg-*</code>, <code>fw-col-xl-*</code></li>
+                </ul>
+            </div>
+
+            <div class="fw-card">
+                <div style="padding: 2rem;">
+                    <div class="fw-row">
+                        <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                            <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column A</div>
+                        </div>
+                        <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                            <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column B</div>
+                        </div>
+                        <div class="fw-col-12 fw-col-md-6 fw-col-lg-4 mb-3">
+                            <div style="border: 1px dashed #d9d1c8; border-radius: 12px; padding: 1rem; text-align: center; background: #fff;">Column C</div>
+                        </div>
+                    </div>
+                    <div class="code-block" style="margin-top: 1.5rem;">
+                        <pre>&lt;div class="fw-container"&gt;
+  &lt;div class="fw-row"&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column A&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column B&lt;/div&gt;
+    &lt;div class="fw-col-12 fw-col-md-6 fw-col-lg-4"&gt;Column C&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Components Preview -->
     <section id="components" class="py-5">
         <div class="fw-container">
@@ -326,7 +396,4 @@
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
-
-
-
 
