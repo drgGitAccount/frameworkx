@@ -136,8 +136,74 @@ body {
 /* Grid System */
 /* Grid system styles are defined in src/core/_grid.css */
 
-/* Smart Grid Spacing System - Gutter System */
-/* This system automatically handles spacing between columns without manual margin/padding utility classes */
+/*
+ * Smart Grid Spacing System - Gutter System
+ * 
+ * This system automatically handles spacing between columns without requiring
+ * manual margin or padding utility classes on individual elements.
+ * 
+ * HOW IT WORKS:
+ * - Row (.fw-row) applies negative margins to contain padding from columns
+ * - Columns ([class*="fw-col"]) apply internal padding to create the gutter
+ * - This creates a clean, predictable spacing between columns
+ * 
+ * GUTTER SIZE REFERENCE:
+ * - --fw-spacing-1: 0.5rem (1rem total per row / col pair)
+ * - --fw-spacing-2: 0.75rem (1.5rem total per row / col pair)
+ * - --fw-spacing-3: 1rem (2rem total per row / col pair) - DEFAULT
+ * - --fw-spacing-4: 1.5rem (3rem total per row / col pair)
+ * - --fw-spacing-5: 2rem (4rem total per row / col pair)
+ * 
+ * HORIZONTAL GUTTER CLASSES:
+ * - .gutter-sm: Tight spacing (0.75rem per side)
+ * - .gutter-md: Default spacing (1rem per side) - Applied by default
+ * - .gutter-lg: Relaxed spacing (1.5rem per side)
+ * - .gutter-xl: Extra relaxed spacing (2rem per side)
+ * 
+ * VERTICAL GUTTER CLASSES:
+ * - .gy-sm: Tight vertical spacing (0.5rem bottom margin on all cols)
+ * - .gy-md: Default vertical spacing (0.75rem bottom margin on all cols)
+ * - .gy-lg: Relaxed vertical spacing (1.5rem bottom margin on all cols)
+ * - .gy-xl: Extra relaxed vertical spacing (2rem bottom margin on all cols)
+ * 
+ * COMBINED GUTTER CLASSES (horizontal + vertical):
+ * - .g-sm: Combines gutter-sm + gy-sm
+ * - .g-md: Combines gutter-md + gy-md (RECOMMENDED)
+ * - .g-lg: Combines gutter-lg + gy-lg
+ * - .g-xl: Combines gutter-xl + gy-xl
+ * 
+ * USAGE EXAMPLES:
+ * 
+ * Default spacing (no class needed):
+ *   <div class="fw-row">
+ *     <div class="fw-col-md-6">Content</div>
+ *     <div class="fw-col-md-6">Content</div>
+ *   </div>
+ * 
+ * Recommended with combined gutters:
+ *   <div class="fw-row g-md">
+ *     <div class="fw-col-md-6">Content</div>
+ *     <div class="fw-col-md-6">Content</div>
+ *   </div>
+ * 
+ * Custom horizontal and vertical spacing:
+ *   <div class="fw-row gutter-lg gy-sm">
+ *     <div class="fw-col-md-6">Content</div>
+ *     <div class="fw-col-md-6">Content</div>
+ *   </div>
+ * 
+ * RESPONSIVE ADJUSTMENTS:
+ * - Tablet (≤1024px): Maintains gutter sizes for consistent layouts
+ * - Mobile (≤768px): Reduces gutter sizes for space efficiency
+ *   - Default gutter reduced from gutter-md to gutter-sm
+ *   - Vertical gaps reduced for mobile to save screen height
+ * 
+ * BENEFITS:
+ * - No need to add manual margin/padding classes to individual columns
+ * - Consistent spacing throughout layouts
+ * - Easy to adjust spacing by changing row class
+ * - Responsive adjustments are automatic
+ */
 
 /* Default gutter size (1.5rem horizontal gutter = 0.75rem padding per side) */
 /* Columns receive: padding-left: 0.75rem, padding-right: 0.75rem */
