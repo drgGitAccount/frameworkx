@@ -21,6 +21,187 @@
             margin: 1rem 0;
             background: #f8f9fa;
         }
+        .content-section {
+            background: var(--fw-color-white);
+            border: 1px solid var(--fw-color-gray-200);
+            border-radius: 18px;
+            padding: 2rem 2.25rem;
+            box-shadow: 0 12px 30px rgba(27, 31, 42, 0.08);
+        }
+        .content-section > h1 {
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+        .content-section > h1::after {
+            content: "";
+            display: block;
+            width: 64px;
+            height: 6px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--fw-color-primary), var(--fw-color-info));
+            margin-top: 0.6rem;
+        }
+        .content-section .lead {
+            color: var(--fw-color-secondary);
+        }
+        .utility-demo {
+            background: var(--fw-color-light);
+            border-color: var(--fw-color-gray-200);
+            box-shadow: inset 0 0 0 1px rgba(27, 31, 42, 0.02);
+        }
+        .utility-demo > *:last-child {
+            margin-bottom: 0;
+        }
+        .demo-thumb {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            display: inline-block;
+        }
+        .demo-thumb.rounded-pill {
+            width: 150px;
+        }
+        .max-demo {
+            display: grid;
+            gap: 1rem;
+        }
+        .max-demo-box {
+            border: 1px dashed var(--fw-color-gray-300);
+            border-radius: 12px;
+            padding: 0.75rem;
+            background: var(--fw-color-white);
+        }
+        .code-block {
+            margin-top: 1rem;
+        }
+        .sidebar-nav .nav-link {
+            color: var(--fw-color-secondary);
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 0.35rem 0.6rem;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar-nav .nav-link:hover,
+        .sidebar-nav .nav-link:focus {
+            color: var(--fw-color-dark);
+            background: rgba(74, 208, 205, 0.15);
+        }
+        #text .utility-demo p {
+            color: var(--fw-color-dark);
+        }
+        #position .utility-demo {
+            display: grid;
+            gap: 1.25rem;
+        }
+        #position .utility-demo .position-relative {
+            background: linear-gradient(180deg, #fffaf6 0%, #ffffff 100%);
+            border-color: var(--fw-color-gray-200);
+            border-radius: 16px;
+            min-height: 170px;
+            padding: 1.5rem;
+        }
+        #position .utility-demo .position-absolute {
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 16px rgba(27, 31, 42, 0.15);
+        }
+        #position .position-demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        #position .position-demo-card {
+            background: var(--fw-color-white);
+            border: 1px dashed var(--fw-color-gray-200);
+            border-radius: 14px;
+            padding: 1rem;
+        }
+        #position .position-demo-title {
+            font-weight: 600;
+            color: var(--fw-color-dark);
+            margin-bottom: 0.75rem;
+        }
+        #position .position-demo-box {
+            position: relative;
+            min-height: 120px;
+            padding: 1rem;
+            background: var(--fw-color-light);
+            border: 1px solid var(--fw-color-gray-200);
+            border-radius: 12px;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            color: var(--fw-color-dark);
+            text-align: center;
+        }
+        #position .position-demo-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            background: var(--fw-color-primary);
+            color: var(--fw-color-white);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        #position .position-demo-chip.secondary {
+            background: var(--fw-color-secondary);
+        }
+        #position .position-demo-note {
+            margin-top: 0.65rem;
+            font-size: 0.85rem;
+            color: var(--fw-color-secondary);
+            text-align: center;
+        }
+        #position .position-demo-fixed {
+            z-index: 20;
+        }
+        #position .position-demo-sticky {
+            background: var(--fw-color-dark);
+            color: var(--fw-color-white);
+            padding: 0.5rem 0.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        #position .position-demo-scroll {
+            height: 160px;
+            overflow: auto;
+            padding: 0.75rem;
+            border: 1px solid var(--fw-color-gray-200);
+            border-radius: 12px;
+            background: #fff;
+        }
+        #position .position-demo-scroll p {
+            margin-bottom: 0.75rem;
+            color: var(--fw-color-secondary);
+        }
+        @media (max-width: 768px) {
+            #position .position-demo-fixed {
+                right: 0.75rem !important;
+                bottom: 0.75rem !important;
+            }
+        }
+        /* Utilities page visibility fixes */
+        .bg-primary { background-color: var(--fw-color-primary) !important; color: var(--fw-color-white) !important; }
+        .bg-secondary { background-color: var(--fw-color-secondary) !important; color: var(--fw-color-white) !important; }
+        .bg-success { background-color: var(--fw-color-success) !important; color: var(--fw-color-white) !important; }
+        .bg-danger { background-color: var(--fw-color-danger) !important; color: var(--fw-color-white) !important; }
+        .bg-warning { background-color: var(--fw-color-warning) !important; color: var(--fw-color-dark) !important; }
+        .bg-info { background-color: var(--fw-color-info) !important; color: var(--fw-color-white) !important; }
+        .bg-light { background-color: var(--fw-color-light) !important; color: var(--fw-color-dark) !important; }
+        .bg-dark { background-color: var(--fw-color-dark) !important; color: var(--fw-color-white) !important; }
+        .bg-white { background-color: var(--fw-color-white) !important; color: var(--fw-color-dark) !important; }
+        .border-start { border-left: 1px solid var(--fw-color-gray-300) !important; }
+        .border-end { border-right: 1px solid var(--fw-color-gray-300) !important; }
+        .border-top-0 { border-top: 0 !important; }
+        .border-end-0 { border-right: 0 !important; }
+        .border-bottom-0 { border-bottom: 0 !important; }
+        .border-start-0 { border-left: 0 !important; }
+        .text-start { text-align: left !important; }
+        .text-end { text-align: right !important; }
     </style>
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
@@ -377,13 +558,13 @@
                     <p>Add classes to an element to easily round its corners.</p>
 
                     <div class="utility-demo">
-                        <img src="https://via.placeholder.com/75x75" class="rounded me-2" alt="Rounded">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-top me-2" alt="Top rounded">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-end me-2" alt="End rounded">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-bottom me-2" alt="Bottom rounded">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-start me-2" alt="Start rounded">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-circle me-2" alt="Circle">
-                        <img src="https://via.placeholder.com/75x75" class="rounded-pill" alt="Pill">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded me-2" alt="Rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-top me-2" alt="Top rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-end me-2" alt="End rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-bottom me-2" alt="Bottom rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-start me-2" alt="Start rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-circle me-2" alt="Circle">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-pill" alt="Pill">
                     </div>
 
                     <h3>Code</h3>
@@ -435,7 +616,16 @@
                     <p>You can also use <code>mw-100</code> or <code>mh-100</code> utilities to set a maximum width or height.</p>
 
                     <div class="utility-demo">
-                        <img src="https://via.placeholder.com/100x100" class="mw-100" alt="Max width 100%">
+                        <div class="max-demo">
+                            <div class="max-demo-box" style="max-width: 260px;">
+                                <img src="https://wallpaperaccess.com/full/1567862.jpg" class="mw-100" alt="Max width 100%">
+                                <p class="text-muted mb-0">Image constrained by container width using <code>mw-100</code>.</p>
+                            </div>
+                            <div class="max-demo-box" style="height: 140px;">
+                                <img src="https://wallpaperaccess.com/full/1567862.jpg" class="mh-100" alt="Max height 100%">
+                                <p class="text-muted mb-0">Image constrained by container height using <code>mh-100</code>.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <h3>Code</h3>
@@ -465,12 +655,38 @@
                     <p>Quick positioning classes are available, though they are not responsive.</p>
 
                     <div class="utility-demo">
-                        <div class="position-relative p-3 bg-light border mb-3">
-                            <div class="position-absolute top-0 start-0 p-2 bg-primary text-white">Top left</div>
-                            <div class="position-absolute top-0 end-0 p-2 bg-primary text-white">Top right</div>
-                            <div class="position-absolute bottom-0 start-0 p-2 bg-primary text-white">Bottom left</div>
-                            <div class="position-absolute bottom-0 end-0 p-2 bg-primary text-white">Bottom right</div>
-                            Relative positioned element
+                        <div class="position-demo-grid">
+                            <div class="position-demo-card">
+                                <div class="position-demo-title">Static</div>
+                                <div class="position-demo-box">
+                                    <span class="position-static position-demo-chip secondary">Static flow</span>
+                                    <span class="position-demo-chip">Sibling</span>
+                                </div>
+                                <div class="position-demo-note">Elements remain in normal document flow.</div>
+                            </div>
+                            <div class="position-demo-card">
+                                <div class="position-demo-title">Relative</div>
+                                <div class="position-demo-box">
+                                    <span class="position-demo-chip secondary">Anchor</span>
+                                    <span class="position-relative position-demo-chip" style="top: -6px; left: 10px;">Relative</span>
+                                </div>
+                                <div class="position-demo-note">Relative offsets move the element without leaving flow.</div>
+                            </div>
+                            <div class="position-demo-card">
+                                <div class="position-demo-title">Absolute</div>
+                                <div class="position-relative position-demo-box">
+                                    <span class="position-absolute top-0 start-0 position-demo-chip">Absolute</span>
+                                </div>
+                                <div class="position-demo-note">Absolutely positioned inside a relative parent.</div>
+                            </div>
+                            <div class="position-demo-card">
+                                <div class="position-demo-title">Fixed</div>
+                                <div class="position-demo-box">
+                                    <span class="position-demo-chip secondary">Viewport</span>
+                                    <span class="position-fixed position-demo-chip position-demo-fixed" style="right: 1.25rem; bottom: 1.25rem;">Fixed</span>
+                                </div>
+                                <div class="position-demo-note">Pinned to the viewport while you scroll.</div>
+                            </div>
                         </div>
                     </div>
 
@@ -480,6 +696,19 @@
                     <div class="utility-demo">
                         <div class="position-relative p-3 bg-light border" style="height: 200px;">
                             <div class="position-absolute top-50 start-50 translate-middle p-2 bg-success text-white">Centered</div>
+                        </div>
+                    </div>
+
+                    <h3>Sticky elements</h3>
+                    <p>Sticky positioned elements stay within the flow until they reach the top of their scroll container.</p>
+
+                    <div class="utility-demo">
+                        <div class="position-demo-scroll">
+                            <div class="position-sticky top-0 position-demo-sticky">Sticky header</div>
+                            <p>Scroll inside this container to see the sticky element hold its position at the top.</p>
+                            <p>Additional content line to create scrollable space and demonstrate the effect.</p>
+                            <p>Keep scrolling to confirm the sticky behavior remains consistent.</p>
+                            <p>Final line for scroll completion.</p>
                         </div>
                     </div>
 
@@ -578,6 +807,3 @@
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
-
-
-

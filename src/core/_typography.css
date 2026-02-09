@@ -190,6 +190,31 @@ h6 {
   font-style: italic !important;
 }
 
+/* Bootstrap-compatible aliases used in docs */
+.fw-bold {
+  font-weight: var(--fw-font-weight-bold) !important;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.fw-normal {
+  font-weight: var(--fw-font-weight-normal) !important;
+}
+
+.fw-light {
+  font-weight: var(--fw-font-weight-light) !important;
+}
+
+.fw-lighter {
+  font-weight: lighter !important;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+
 .text-decoration-none {
   text-decoration: none !important;
 }
