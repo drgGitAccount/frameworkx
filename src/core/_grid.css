@@ -297,106 +297,12 @@
   --fw-gutter-y: var(--fw-spacing-5);
 }
 
-@media (min-width: 576px) {
-  .fw-col-sm {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-  
-  .fw-col-sm-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  
-  .fw-col-sm-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
-  .fw-col-sm-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
-  .fw-col-sm-3 { flex: 0 0 25%; max-width: 25%; }
-  .fw-col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-  .fw-col-sm-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-  .fw-col-sm-6 { flex: 0 0 50%; max-width: 50%; }
-  .fw-col-sm-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
-  .fw-col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-  .fw-col-sm-9 { flex: 0 0 75%; max-width: 75%; }
-  .fw-col-sm-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
-  .fw-col-sm-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
-  .fw-col-sm-12 { flex: 0 0 100%; max-width: 100%; }
-}
-
-@media (min-width: 768px) {
-  .fw-col-md {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-  
-  .fw-col-md-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  
-  .fw-col-md-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
-  .fw-col-md-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
-  .fw-col-md-3 { flex: 0 0 25%; max-width: 25%; }
-  .fw-col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-  .fw-col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-  .fw-col-md-6 { flex: 0 0 50%; max-width: 50%; }
-  .fw-col-md-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
-  .fw-col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-  .fw-col-md-9 { flex: 0 0 75%; max-width: 75%; }
-  .fw-col-md-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
-  .fw-col-md-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
-  .fw-col-md-12 { flex: 0 0 100%; max-width: 100%; }
-}
-
-@media (min-width: 992px) {
-  .fw-col-lg {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-  
-  .fw-col-lg-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  
-  .fw-col-lg-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
-  .fw-col-lg-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
-  .fw-col-lg-3 { flex: 0 0 25%; max-width: 25%; }
-  .fw-col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-  .fw-col-lg-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-  .fw-col-lg-6 { flex: 0 0 50%; max-width: 50%; }
-  .fw-col-lg-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
-  .fw-col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-  .fw-col-lg-9 { flex: 0 0 75%; max-width: 75%; }
-  .fw-col-lg-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
-  .fw-col-lg-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
-  .fw-col-lg-12 { flex: 0 0 100%; max-width: 100%; }
-}
-
-@media (min-width: 1200px) {
-  .fw-col-xl {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-  
-  .fw-col-xl-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  
-  .fw-col-xl-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
-  .fw-col-xl-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
-  .fw-col-xl-3 { flex: 0 0 25%; max-width: 25%; }
-  .fw-col-xl-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-  .fw-col-xl-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-  .fw-col-xl-6 { flex: 0 0 50%; max-width: 50%; }
-  .fw-col-xl-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
-  .fw-col-xl-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-  .fw-col-xl-9 { flex: 0 0 75%; max-width: 75%; }
-  .fw-col-xl-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
-  .fw-col-xl-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
-  .fw-col-xl-12 { flex: 0 0 100%; max-width: 100%; }
-}
+/* Responsive grid classes (sm, md, lg, xl) are defined in:
+ * - src/responsive/_sm.css  (min-width: 576px)
+ * - src/responsive/_md.css  (min-width: 768px)
+ * - src/responsive/_lg.css  (min-width: 992px)
+ * - src/responsive/_xl.css  (min-width: 1200px)
+ * 
+ * This prevents duplication and centralizes responsive definitions.
+ * See frameworkx.css import order for the load sequence.
+ */
