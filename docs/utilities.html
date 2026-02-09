@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,203 +6,7 @@
     <title>Utilities - FrameworkX</title>
     <link href="../src/frameworkx.css" rel="stylesheet">
     <link href="common-styles.css" rel="stylesheet">
-    <style>
-        .sidebar-nav {
-            position: sticky;
-            top: 2rem;
-        }
-        .content-section {
-            scroll-margin-top: 2rem;
-        }
-        .utility-demo {
-            border: 1px solid #e9ecef;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            background: #f8f9fa;
-        }
-        .content-section {
-            background: var(--fw-color-white);
-            border: 1px solid var(--fw-color-gray-200);
-            border-radius: 18px;
-            padding: 2rem 2.25rem;
-            box-shadow: 0 12px 30px rgba(27, 31, 42, 0.08);
-        }
-        .content-section > h1 {
-            position: relative;
-            margin-bottom: 0.75rem;
-        }
-        .content-section > h1::after {
-            content: "";
-            display: block;
-            width: 64px;
-            height: 6px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--fw-color-primary), var(--fw-color-info));
-            margin-top: 0.6rem;
-        }
-        .content-section .lead {
-            color: var(--fw-color-secondary);
-        }
-        .utility-demo {
-            background: var(--fw-color-light);
-            border-color: var(--fw-color-gray-200);
-            box-shadow: inset 0 0 0 1px rgba(27, 31, 42, 0.02);
-        }
-        .utility-demo > *:last-child {
-            margin-bottom: 0;
-        }
-        .demo-thumb {
-            width: 75px;
-            height: 75px;
-            object-fit: cover;
-            display: inline-block;
-        }
-        .demo-thumb.rounded-pill {
-            width: 150px;
-        }
-        .max-demo {
-            display: grid;
-            gap: 1rem;
-        }
-        .max-demo-box {
-            border: 1px dashed var(--fw-color-gray-300);
-            border-radius: 12px;
-            padding: 0.75rem;
-            background: var(--fw-color-white);
-        }
-        .code-block {
-            margin-top: 1rem;
-        }
-        .sidebar-nav .nav-link {
-            color: var(--fw-color-secondary);
-            font-weight: 600;
-            border-radius: 999px;
-            padding: 0.35rem 0.6rem;
-            margin-bottom: 0.25rem;
-        }
-        .sidebar-nav .nav-link:hover,
-        .sidebar-nav .nav-link:focus {
-            color: var(--fw-color-dark);
-            background: rgba(74, 208, 205, 0.15);
-        }
-        #text .utility-demo p {
-            color: var(--fw-color-dark);
-        }
-        #position .utility-demo {
-            display: grid;
-            gap: 1.25rem;
-        }
-        #position .utility-demo .position-relative {
-            background: linear-gradient(180deg, #fffaf6 0%, #ffffff 100%);
-            border-color: var(--fw-color-gray-200);
-            border-radius: 16px;
-            min-height: 170px;
-            padding: 1.5rem;
-        }
-        #position .utility-demo .position-absolute {
-            border-radius: 999px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 6px 16px rgba(27, 31, 42, 0.15);
-        }
-        #position .position-demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-        #position .position-demo-card {
-            background: var(--fw-color-white);
-            border: 1px dashed var(--fw-color-gray-200);
-            border-radius: 14px;
-            padding: 1rem;
-        }
-        #position .position-demo-title {
-            font-weight: 600;
-            color: var(--fw-color-dark);
-            margin-bottom: 0.75rem;
-        }
-        #position .position-demo-box {
-            position: relative;
-            min-height: 120px;
-            padding: 1rem;
-            background: var(--fw-color-light);
-            border: 1px solid var(--fw-color-gray-200);
-            border-radius: 12px;
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            justify-content: center;
-            color: var(--fw-color-dark);
-            text-align: center;
-        }
-        #position .position-demo-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.35rem 0.75rem;
-            background: var(--fw-color-primary);
-            color: var(--fw-color-white);
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        #position .position-demo-chip.secondary {
-            background: var(--fw-color-secondary);
-        }
-        #position .position-demo-note {
-            margin-top: 0.65rem;
-            font-size: 0.85rem;
-            color: var(--fw-color-secondary);
-            text-align: center;
-        }
-        #position .position-demo-fixed {
-            z-index: 20;
-        }
-        #position .position-demo-sticky {
-            background: var(--fw-color-dark);
-            color: var(--fw-color-white);
-            padding: 0.5rem 0.75rem;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-        #position .position-demo-scroll {
-            height: 160px;
-            overflow: auto;
-            padding: 0.75rem;
-            border: 1px solid var(--fw-color-gray-200);
-            border-radius: 12px;
-            background: #fff;
-        }
-        #position .position-demo-scroll p {
-            margin-bottom: 0.75rem;
-            color: var(--fw-color-secondary);
-        }
-        @media (max-width: 768px) {
-            #position .position-demo-fixed {
-                right: 0.75rem !important;
-                bottom: 0.75rem !important;
-            }
-        }
-        /* Utilities page visibility fixes */
-        .bg-primary { background-color: var(--fw-color-primary) !important; color: var(--fw-color-white) !important; }
-        .bg-secondary { background-color: var(--fw-color-secondary) !important; color: var(--fw-color-white) !important; }
-        .bg-success { background-color: var(--fw-color-success) !important; color: var(--fw-color-white) !important; }
-        .bg-danger { background-color: var(--fw-color-danger) !important; color: var(--fw-color-white) !important; }
-        .bg-warning { background-color: var(--fw-color-warning) !important; color: var(--fw-color-dark) !important; }
-        .bg-info { background-color: var(--fw-color-info) !important; color: var(--fw-color-white) !important; }
-        .bg-light { background-color: var(--fw-color-light) !important; color: var(--fw-color-dark) !important; }
-        .bg-dark { background-color: var(--fw-color-dark) !important; color: var(--fw-color-white) !important; }
-        .bg-white { background-color: var(--fw-color-white) !important; color: var(--fw-color-dark) !important; }
-        .border-start { border-left: 1px solid var(--fw-color-gray-300) !important; }
-        .border-end { border-right: 1px solid var(--fw-color-gray-300) !important; }
-        .border-top-0 { border-top: 0 !important; }
-        .border-end-0 { border-right: 0 !important; }
-        .border-bottom-0 { border-bottom: 0 !important; }
-        .border-start-0 { border-left: 0 !important; }
-        .text-start { text-align: left !important; }
-        .text-end { text-align: right !important; }
-    </style>
+    
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
     <!-- Header -->
@@ -234,8 +38,8 @@
                                 <a class="nav-link" href="#spacing">Spacing</a>
                                 <a class="nav-link" href="#display">Display</a>
                                 <a class="nav-link" href="#flex">Flex</a>
-                                <a class="nav-link" href="#text">Text</a>
-                                <a class="nav-link" href="#colors">Colors</a>
+                                <a class="nav-link" href="#text">Text</a>                                <a class="nav-link" href="#typography">Typography</a>
+                                <a class="nav-link" href="#colors">Colors</a>                                <a class="nav-link" href="#opacity">Opacity</a>
                                 <a class="nav-link" href="#borders">Borders</a>
                                 <a class="nav-link" href="#sizing">Sizing</a>
                                 <a class="nav-link" href="#position">Position</a>
@@ -260,12 +64,12 @@
                     <p>Spacing utilities that apply to all breakpoints, from <code>xs</code> to <code>xl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code>min-width: 0;</code> and up, and thus are not bound by a viewport.</p>
 
                     <h3>Examples</h3>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="m-3 p-3 bg-light border">Margin and padding utilities</div>
                     </div>
 
                     <h4>Margin</h4>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="m-0 bg-primary text-white p-2 mb-2">m-0</div>
                         <div class="m-1 bg-primary text-white p-2 mb-2">m-1</div>
                         <div class="m-2 bg-primary text-white p-2 mb-2">m-2</div>
@@ -275,7 +79,7 @@
                     </div>
 
                     <h4>Padding</h4>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="p-0 bg-info text-white mb-2">p-0</div>
                         <div class="p-1 bg-info text-white mb-2">p-1</div>
                         <div class="p-2 bg-info text-white mb-2">p-2</div>
@@ -306,7 +110,7 @@
                     <p>Change the <code>display</code> value of elements with our responsive display utility classes. We purposely support only a subset of all possible values for <code>display</code>. Classes can be combined for various effects as you need.</p>
 
                     <h3>Examples</h3>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="d-block bg-primary text-white p-2 mb-2">d-block</div>
                         <div class="d-inline bg-success text-white p-2 mb-2">d-inline</div>
                         <div class="d-inline-block bg-info text-white p-2 mb-2">d-inline-block</div>
@@ -337,7 +141,7 @@
                     <h3>Enable flex behaviors</h3>
                     <p>Apply <code>display</code> utilities to create a flexbox container and transform direct children elements into flex items.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="d-flex p-2 bg-light border">
                             <div class="p-2 bg-primary text-white me-2">Flex item 1</div>
                             <div class="p-2 bg-primary text-white me-2">Flex item 2</div>
@@ -348,7 +152,7 @@
                     <h3>Direction</h3>
                     <p>Set the direction of flex items in a flex container with direction utilities.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="d-flex flex-column p-2 bg-light border mb-3">
                             <div class="p-2 bg-success text-white mb-2">Flex item 1</div>
                             <div class="p-2 bg-success text-white mb-2">Flex item 2</div>
@@ -359,7 +163,7 @@
                     <h3>Justify content</h3>
                     <p>Use <code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <code>flex-direction: column</code>).</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="d-flex justify-content-between p-2 bg-light border mb-3">
                             <div class="p-2 bg-warning text-white">Flex item 1</div>
                             <div class="p-2 bg-warning text-white">Flex item 2</div>
@@ -370,7 +174,7 @@
                     <h3>Align items</h3>
                     <p>Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>).</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="d-flex align-items-center p-2 bg-light border" style="height: 100px;">
                             <div class="p-2 bg-danger text-white me-2" style="height: 30px;">Flex item 1</div>
                             <div class="p-2 bg-danger text-white me-2" style="height: 50px;">Flex item 2</div>
@@ -410,7 +214,7 @@
                     <h3>Text alignment</h3>
                     <p>Easily realign text to components with text alignment classes.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <p class="text-start">Left aligned text.</p>
                         <p class="text-center">Center aligned text.</p>
                         <p class="text-end">Right aligned text.</p>
@@ -419,7 +223,7 @@
                     <h3>Text wrapping and overflow</h3>
                     <p>Wrap text with a <code>.text-wrap</code> class.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="badge bg-primary text-wrap" style="width: 6rem;">
                             This text should wrap.
                         </div>
@@ -427,7 +231,7 @@
 
                     <p>Prevent text from wrapping with a <code>.text-nowrap</code> class.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="text-nowrap bg-light border" style="width: 8rem;">
                             This text should overflow the box.
                         </div>
@@ -436,7 +240,7 @@
                     <h3>Text transform</h3>
                     <p>Transform text in components with text capitalization classes.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <p class="text-lowercase">Lowercased text.</p>
                         <p class="text-uppercase">Uppercased text.</p>
                         <p class="text-capitalize">CapiTaliZed text.</p>
@@ -445,8 +249,7 @@
                     <h3>Font weight and italics</h3>
                     <p>Quickly change the weight of text or italicize text.</p>
 
-                    <div class="utility-demo">
-                        <p class="fw-bold">Bold text.</p>
+                    <div class="fw-docs-utility-demo fw-docs-text-demo">                        <p class="fw-bold">Bold text.</p>
                         <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
                         <p class="fw-normal">Normal weight text.</p>
                         <p class="fw-light">Light weight text.</p>
@@ -470,6 +273,89 @@
                     </div>
                 </section>
 
+                
+                <!-- Typography -->
+                <section id="typography" class="content-section mb-5">
+                    <h1>Typography Utilities</h1>
+                    <p class="lead">Examples of headings, paragraph styles, and text utilities for weight, style, alignment, color, transform, and line height.</p>
+
+                    <h3>Headings</h3>
+                    <div class="fw-docs-utility-demo">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                    </div>
+
+                    <h3>Paragraph & Lead</h3>
+                    <div class="fw-docs-utility-demo">
+                        <p class="lead">This is lead text for introducing a section or a feature.</p>
+                        <p>Regular paragraph text provides standard body content with comfortable line height.</p>
+                        <p class="text-muted">Muted text is used for secondary or helper copy.</p>
+                    </div>
+
+                    <h3>Font Weight & Style</h3>
+                    <div class="fw-docs-utility-demo">
+                        <p class="fw-light">Light weight text</p>
+                        <p class="fw-normal">Normal weight text</p>
+                        <p class="fw-bold">Bold weight text</p>
+                        <p class="fw-bolder">Bolder (relative) weight text</p>
+                        <p class="fst-italic">Italic text</p>
+                    </div>
+
+                    <h3>Alignment & Transform</h3>
+                    <div class="fw-docs-utility-demo">
+                        <p class="text-start">Left aligned text</p>
+                        <p class="text-center">Center aligned text</p>
+                        <p class="text-end">Right aligned text</p>
+                        <p class="text-uppercase">Uppercase text</p>
+                        <p class="text-lowercase">Lowercase text</p>
+                        <p class="text-capitalize">Capitalized text</p>
+                    </div>
+
+                    <h3>Text Colors</h3>
+                    <div class="fw-docs-utility-demo">
+                        <p class="text-primary">Primary text</p>
+                        <p class="text-secondary">Secondary text</p>
+                        <p class="text-success">Success text</p>
+                        <p class="text-danger">Danger text</p>
+                        <p class="text-warning">Warning text</p>
+                        <p class="text-info">Info text</p>
+                        <p class="text-muted">Muted text</p>
+                    </div>
+
+                    <h3>Line Height</h3>
+                    <div class="fw-docs-utility-demo">
+                        <p class="lh-1">Line height 1 for compact text.</p>
+                        <p class="lh-sm">Small line height for denser blocks.</p>
+                        <p class="lh-base">Base line height for default body copy.</p>
+                        <p class="lh-lg">Large line height for airy content.</p>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p class="lead"&gt;Lead paragraph&lt;/p&gt;
+&lt;p class="fw-bold"&gt;Bold text&lt;/p&gt;
+&lt;p class="fst-italic"&gt;Italic text&lt;/p&gt;
+
+&lt;p class="text-start"&gt;Left&lt;/p&gt;
+&lt;p class="text-center"&gt;Center&lt;/p&gt;
+&lt;p class="text-end"&gt;Right&lt;/p&gt;
+
+&lt;p class="text-uppercase"&gt;Uppercase&lt;/p&gt;
+&lt;p class="text-lowercase"&gt;Lowercase&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;Capitalize&lt;/p&gt;
+
+&lt;p class="text-primary"&gt;Primary&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted&lt;/p&gt;
+
+&lt;p class="lh-1"&gt;Compact&lt;/p&gt;
+&lt;p class="lh-lg"&gt;Spacious&lt;/p&gt;</pre>
+                    </div>
+                </section>
                 <!-- Colors -->
                 <section id="colors" class="content-section mb-5">
                     <h1>Color Utilities</h1>
@@ -478,7 +364,7 @@
                     <h3>Text color</h3>
                     <p>Colorize text with color utilities. If you need to colorize your links on hover, use the <code>.link-*</code> link modifiers or <code>.text-decoration</code> utilities.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <p class="text-primary">.text-primary</p>
                         <p class="text-secondary">.text-secondary</p>
                         <p class="text-success">.text-success</p>
@@ -494,7 +380,7 @@
                     <h3>Background color</h3>
                     <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities do not set <code>color</code>, so in some cases you'll want to pair them with a <code>.text-*</code> color utility.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
                         <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
                         <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
@@ -521,13 +407,75 @@
                     </div>
                 </section>
 
-                <!-- Borders -->
+                
+                <!-- Opacity -->
+<section id="opacity" class="content-section mb-5">
+    <h1>Opacity Utilities</h1>
+    <p class="lead">Use 10% opacity steps (10–100) for background, border, and text colors.</p>
+
+    <h3>Background Opacity (Primary)</h3>
+    <div class="fw-docs-utility-demo">
+        <div class="p-3 bg-light border rounded">
+            <div class="p-2 mb-2 bg-primary-10 border border-primary-10">.bg-primary-10</div>
+            <div class="p-2 mb-2 bg-primary-20 border border-primary-20">.bg-primary-20</div>
+            <div class="p-2 mb-2 bg-primary-30 border border-primary-30">.bg-primary-30</div>
+            <div class="p-2 mb-2 bg-primary-40 border border-primary-40">.bg-primary-40</div>
+            <div class="p-2 mb-2 bg-primary-50 border border-primary-50">.bg-primary-50</div>
+            <div class="p-2 mb-2 bg-primary-60 border border-primary-60 text-white">.bg-primary-60</div>
+            <div class="p-2 mb-2 bg-primary-70 border border-primary-70 text-white">.bg-primary-70</div>
+            <div class="p-2 mb-2 bg-primary-80 border border-primary-80 text-white">.bg-primary-80</div>
+            <div class="p-2 mb-2 bg-primary-90 border border-primary-90 text-white">.bg-primary-90</div>
+            <div class="p-2 mb-2 bg-primary-100 border border-primary-100 text-white">.bg-primary-100</div>
+        </div>
+    </div>
+
+    <h3>Text Opacity (White)</h3>
+    <div class="fw-docs-utility-demo">
+        <div class="p-3 bg-dark rounded">
+            <p class="text-white-10">.text-white-10</p>
+            <p class="text-white-20">.text-white-20</p>
+            <p class="text-white-30">.text-white-30</p>
+            <p class="text-white-40">.text-white-40</p>
+            <p class="text-white-50">.text-white-50</p>
+            <p class="text-white-60">.text-white-60</p>
+            <p class="text-white-70">.text-white-70</p>
+            <p class="text-white-80">.text-white-80</p>
+            <p class="text-white-90">.text-white-90</p>
+            <p class="text-white-100">.text-white-100</p>
+        </div>
+    </div>
+
+    <h3>Border Opacity (Primary)</h3>
+    <div class="fw-docs-utility-demo">
+        <div class="p-3 bg-light border rounded">
+            <div class="p-2 mb-2 border border-primary-10">.border-primary-10</div>
+            <div class="p-2 mb-2 border border-primary-20">.border-primary-20</div>
+            <div class="p-2 mb-2 border border-primary-30">.border-primary-30</div>
+            <div class="p-2 mb-2 border border-primary-40">.border-primary-40</div>
+            <div class="p-2 mb-2 border border-primary-50">.border-primary-50</div>
+            <div class="p-2 mb-2 border border-primary-60">.border-primary-60</div>
+            <div class="p-2 mb-2 border border-primary-70">.border-primary-70</div>
+            <div class="p-2 mb-2 border border-primary-80">.border-primary-80</div>
+            <div class="p-2 mb-2 border border-primary-90">.border-primary-90</div>
+            <div class="p-2 mb-2 border border-primary-100">.border-primary-100</div>
+        </div>
+    </div>
+
+    <h3>Code</h3>
+    <div class="code-block">
+        <pre>&lt;div class="bg-primary-30"&gt;...&lt;/div&gt;
+&lt;p class="text-white-60"&gt;...&lt;/p&gt;
+&lt;div class="border border-primary-50"&gt;...&lt;/div&gt;</pre>
+    </div>
+</section>
+
+<!-- Borders -->
                 <section id="borders" class="content-section mb-5">
                     <h1>Border Utilities</h1>
                     <p class="lead">Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.</p>
 
                     <h3>Additive</h3>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <span class="border border-primary p-2 me-2">Border</span>
                         <span class="border-top border-primary p-2 me-2">Border top</span>
                         <span class="border-end border-primary p-2 me-2">Border end</span>
@@ -536,7 +484,7 @@
                     </div>
 
                     <h3>Subtractive</h3>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <span class="border border-0 p-2 me-2">No border</span>
                         <span class="border border-top-0 p-2 me-2">No top border</span>
                         <span class="border border-end-0 p-2 me-2">No end border</span>
@@ -545,7 +493,7 @@
                     </div>
 
                     <h3>Border color</h3>
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <span class="border border-primary p-2 me-2">Primary</span>
                         <span class="border border-secondary p-2 me-2">Secondary</span>
                         <span class="border border-success p-2 me-2">Success</span>
@@ -557,14 +505,14 @@
                     <h3>Border radius</h3>
                     <p>Add classes to an element to easily round its corners.</p>
 
-                    <div class="utility-demo">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded me-2" alt="Rounded">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-top me-2" alt="Top rounded">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-end me-2" alt="End rounded">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-bottom me-2" alt="Bottom rounded">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-start me-2" alt="Start rounded">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-circle me-2" alt="Circle">
-                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="demo-thumb rounded-pill" alt="Pill">
+                    <div class="fw-docs-utility-demo">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded me-2" alt="Rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded-top me-2" alt="Top rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded-end me-2" alt="End rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded-bottom me-2" alt="Bottom rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded-start me-2" alt="Start rounded">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb rounded-circle me-2" alt="Circle">
+                        <img src="https://wallpaperaccess.com/full/31193.jpg" class="fw-docs-thumb fw-docs-thumb-pill rounded-pill" alt="Pill">
                     </div>
 
                     <h3>Code</h3>
@@ -595,7 +543,7 @@
                     <h3>Width and height</h3>
                     <p>Use <code>w-25</code>, <code>w-50</code>, <code>w-75</code>, <code>w-100</code>, or <code>w-auto</code> to set width.</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="w-25 p-3 bg-primary text-white mb-2">Width 25%</div>
                         <div class="w-50 p-3 bg-primary text-white mb-2">Width 50%</div>
                         <div class="w-75 p-3 bg-primary text-white mb-2">Width 75%</div>
@@ -605,7 +553,7 @@
 
                     <p>Use <code>h-25</code>, <code>h-50</code>, <code>h-75</code>, <code>h-100</code>, or <code>h-auto</code> to set height.</p>
 
-                    <div class="utility-demo" style="height: 200px;">
+                    <div class="fw-docs-utility-demo" style="height: 200px;">
                         <div class="h-25 d-inline-block bg-success text-white p-2 me-2" style="width: 120px;">Height 25%</div>
                         <div class="h-50 d-inline-block bg-success text-white p-2 me-2" style="width: 120px;">Height 50%</div>
                         <div class="h-75 d-inline-block bg-success text-white p-2 me-2" style="width: 120px;">Height 75%</div>
@@ -615,13 +563,13 @@
                     <h3>Max width and height</h3>
                     <p>You can also use <code>mw-100</code> or <code>mh-100</code> utilities to set a maximum width or height.</p>
 
-                    <div class="utility-demo">
-                        <div class="max-demo">
-                            <div class="max-demo-box" style="max-width: 260px;">
+                    <div class="fw-docs-utility-demo">
+                        <div class="fw-docs-max-demo">
+                            <div class="fw-docs-fw-docs-max-demo-box" style="max-width: 260px;">
                                 <img src="https://wallpaperaccess.com/full/1567862.jpg" class="mw-100" alt="Max width 100%">
                                 <p class="text-muted mb-0">Image constrained by container width using <code>mw-100</code>.</p>
                             </div>
-                            <div class="max-demo-box" style="height: 140px;">
+                            <div class="fw-docs-fw-docs-max-demo-box" style="height: 140px;">
                                 <img src="https://wallpaperaccess.com/full/1567862.jpg" class="mh-100" alt="Max height 100%">
                                 <p class="text-muted mb-0">Image constrained by container height using <code>mh-100</code>.</p>
                             </div>
@@ -654,38 +602,38 @@
                     <h3>Common positioning values</h3>
                     <p>Quick positioning classes are available, though they are not responsive.</p>
 
-                    <div class="utility-demo">
-                        <div class="position-demo-grid">
-                            <div class="position-demo-card">
-                                <div class="position-demo-title">Static</div>
-                                <div class="position-demo-box">
-                                    <span class="position-static position-demo-chip secondary">Static flow</span>
-                                    <span class="position-demo-chip">Sibling</span>
+                    <div class="fw-docs-utility-demo fw-docs-position-demo">
+                        <div class="fw-docs-position-grid">
+                            <div class="fw-docs-position-card">
+                                <div class="fw-docs-position-title">Static</div>
+                                <div class="fw-docs-position-box">
+                                    <span class="position-static fw-docs-position-chip fw-docs-position-chip-secondary">Static flow</span>
+                                    <span class="fw-docs-position-chip">Sibling</span>
                                 </div>
-                                <div class="position-demo-note">Elements remain in normal document flow.</div>
+                                <div class="fw-docs-position-note">Elements remain in normal document flow.</div>
                             </div>
-                            <div class="position-demo-card">
-                                <div class="position-demo-title">Relative</div>
-                                <div class="position-demo-box">
-                                    <span class="position-demo-chip secondary">Anchor</span>
-                                    <span class="position-relative position-demo-chip" style="top: -6px; left: 10px;">Relative</span>
+                            <div class="fw-docs-position-card">
+                                <div class="fw-docs-position-title">Relative</div>
+                                <div class="fw-docs-position-box">
+                                    <span class="fw-docs-position-chip fw-docs-position-chip-secondary">Anchor</span>
+                                    <span class="position-relative fw-docs-position-chip" style="top: -6px; left: 10px;">Relative</span>
                                 </div>
-                                <div class="position-demo-note">Relative offsets move the element without leaving flow.</div>
+                                <div class="fw-docs-position-note">Relative offsets move the element without leaving flow.</div>
                             </div>
-                            <div class="position-demo-card">
-                                <div class="position-demo-title">Absolute</div>
-                                <div class="position-relative position-demo-box">
-                                    <span class="position-absolute top-0 start-0 position-demo-chip">Absolute</span>
+                            <div class="fw-docs-position-card">
+                                <div class="fw-docs-position-title">Absolute</div>
+                                <div class="position-relative fw-docs-position-box fw-docs-position-surface">
+                                    <span class="position-absolute top-0 start-0 fw-docs-position-chip fw-docs-position-label">Absolute</span>
                                 </div>
-                                <div class="position-demo-note">Absolutely positioned inside a relative parent.</div>
+                                <div class="fw-docs-position-note">Absolutely positioned inside a relative parent.</div>
                             </div>
-                            <div class="position-demo-card">
-                                <div class="position-demo-title">Fixed</div>
-                                <div class="position-demo-box">
-                                    <span class="position-demo-chip secondary">Viewport</span>
-                                    <span class="position-fixed position-demo-chip position-demo-fixed" style="right: 1.25rem; bottom: 1.25rem;">Fixed</span>
+                            <div class="fw-docs-position-card">
+                                <div class="fw-docs-position-title">Fixed</div>
+                                <div class="fw-docs-position-box">
+                                    <span class="fw-docs-position-chip fw-docs-position-chip-secondary">Viewport</span>
+                                    <span class="position-fixed fw-docs-position-chip fw-docs-position-fixed" style="right: 1.25rem; bottom: 1.25rem;">Fixed</span>
                                 </div>
-                                <div class="position-demo-note">Pinned to the viewport while you scroll.</div>
+                                <div class="fw-docs-position-note">Pinned to the viewport while you scroll.</div>
                             </div>
                         </div>
                     </div>
@@ -693,18 +641,18 @@
                     <h3>Center elements</h3>
                     <p>In addition, you can also center the elements with the transform utility class.</p>
 
-                    <div class="utility-demo">
-                        <div class="position-relative p-3 bg-light border" style="height: 200px;">
-                            <div class="position-absolute top-50 start-50 translate-middle p-2 bg-success text-white">Centered</div>
+                    <div class="fw-docs-utility-demo">
+                        <div class="position-relative p-3 bg-light border fw-docs-position-surface" style="height: 200px;">
+                            <div class="position-absolute top-50 start-50 translate-middle p-2 bg-success text-white fw-docs-position-label">Centered</div>
                         </div>
                     </div>
 
                     <h3>Sticky elements</h3>
                     <p>Sticky positioned elements stay within the flow until they reach the top of their scroll container.</p>
 
-                    <div class="utility-demo">
-                        <div class="position-demo-scroll">
-                            <div class="position-sticky top-0 position-demo-sticky">Sticky header</div>
+                    <div class="fw-docs-utility-demo">
+                        <div class="fw-docs-position-scroll">
+                            <div class="position-sticky top-0 fw-docs-position-sticky">Sticky header</div>
                             <p>Scroll inside this container to see the sticky element hold its position at the top.</p>
                             <p>Additional content line to create scrollable space and demonstrate the effect.</p>
                             <p>Keep scrolling to confirm the sticky behavior remains consistent.</p>
@@ -741,7 +689,7 @@
                     <h3>Examples</h3>
                     <p>While shadows on components are disabled by default in FrameworkX and can be enabled via CSS variables, you can also quickly add or remove shadows with our <code>box-shadow</code> utility classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated variables to match).</p>
 
-                    <div class="utility-demo">
+                    <div class="fw-docs-utility-demo">
                         <div class="shadow-none p-3 mb-3 bg-light border">No shadow</div>
                         <div class="shadow-sm p-3 mb-3 bg-light border">Small shadow</div>
                         <div class="shadow p-3 mb-3 bg-light border">Regular shadow</div>
@@ -807,3 +755,7 @@
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
+
+
+
+
