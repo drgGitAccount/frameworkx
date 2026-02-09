@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VisualUI - Modern CSS Framework</title>
-    <link href="../src/VisualUI.css" rel="stylesheet">
+    <title>Home - FrameworkX</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <link href="common-styles.css" rel="stylesheet">
     <style>
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -17,13 +18,6 @@
         .feature-card:hover {
             transform: translateY(-5px);
         }
-        .code-block {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
         .nav-pills .nav-link {
             border-radius: 0.375rem;
         }
@@ -34,22 +28,17 @@
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
     <!-- Header -->
-    <header class="fw-header fw-header-primary">
-        <div class="fw-container">
-            <div class="fw-header-container">
-                <a href="#" class="fw-header-brand">
-                    <span class="fw-header-brand-text">VisualUI</span>
-                </a>
-                <nav class="fw-header-nav">
-                    <a href="#features" class="fw-header-nav-link">Features</a>
-                    <a href="#components" class="fw-header-nav-link">Components</a>
-                    <a href="#utilities" class="fw-header-nav-link">Utilities</a>
-                    <a href="#examples" class="fw-header-nav-link">Examples</a>
-                    <a href="#getting-started" class="fw-header-nav-link">Getting Started</a>
-                </nav>
-                <div class="fw-header-actions">
-                    <a href="https://github.com/VisualUI/VisualUI" class="fw-btn fw-btn-outline-light">GitHub</a>
-                </div>
+    <header class="fw-header">
+        <div class="fw-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <a href="index.html" class="fw-header-brand">FrameworkX</a>
+            <nav class="fw-header-nav">
+                <a href="index.html" class="fw-header-nav-link active">Home</a>
+                <a href="getting-started.html" class="fw-header-nav-link">Getting Started</a>
+                <a href="components.html" class="fw-header-nav-link">Components</a>
+                <a href="utilities.html" class="fw-header-nav-link">Utilities</a>
+            </nav>
+            <div class="fw-header-actions">
+                <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
             </div>
         </div>
     </header>
@@ -57,14 +46,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="fw-container">
-            <div class="fw-row">
-                <div class="fw-col-lg-8">
-                    <h1 class="display-2 fw-font-weight-bold mb-4">VisualUI</h1>
-                    <p class="lead mb-4">A production-ready CSS framework that combines the best of Bootstrap and Tailwind CSS. Modern, flexible, and easy to extend.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#getting-started" class="fw-btn fw-btn-light fw-btn-lg">Get Started</a>
-                        <a href="#examples" class="fw-btn fw-btn-outline-light fw-btn-lg">View Examples</a>
-                    </div>
+            <div style="padding: 5rem 0; max-width: 800px;">
+                <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2; color: white;">FrameworkX</h1>
+                <h2 style="font-size: 1.5rem; font-weight: 300; margin-bottom: 2rem; color: rgba(255,255,255,0.9);">A Modern CSS Framework</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: rgba(255,255,255,0.85); line-height: 1.8;">A production-ready CSS framework that combines the best of Bootstrap and Tailwind CSS. Modern, flexible, easy to extend, and built for developers who want to create beautiful websites fast.</p>
+                <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                    <a href="getting-started.html" class="fw-btn fw-btn-light">Get Started →</a>
+                    <a href="components.html" class="fw-btn fw-btn-outline-light">View Components</a>
                 </div>
             </div>
         </div>
@@ -73,44 +61,35 @@
     <!-- Features Section -->
     <section id="features" class="py-5">
         <div class="fw-container">
-            <h2 class="text-center mb-5">Why VisualUI?</h2>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: bold; color: #1a1a1a; margin-bottom: 1rem;">Why Choose FrameworkX?</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 0;">Everything you need to build modern websites, faster.</p>
+            </div>
             <div class="fw-row">
                 <div class="fw-col-md-4 mb-4">
                     <div class="fw-card feature-card h-100">
-                        <div class="fw-card-body text-center">
-                            <div class="text-primary mb-3">
-                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                                </svg>
-                            </div>
-                            <h5 class="fw-card-title">Production Ready</h5>
-                            <p class="fw-card-text">Built with production in mind. Clean, optimized, and thoroughly tested code that you can trust.</p>
+                        <div style="padding: 2.5rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                            <h3 class="fw-card-title">Production Ready</h3>
+                            <p class="fw-card-text">Built for production with clean, optimized, and thoroughly tested code you can trust in any project.</p>
                         </div>
                     </div>
                 </div>
                 <div class="fw-col-md-4 mb-4">
                     <div class="fw-card feature-card h-100">
-                        <div class="fw-card-body text-center">
-                            <div class="text-primary mb-3">
-                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
-                            </div>
-                            <h5 class="fw-card-title">Utility First</h5>
-                            <p class="fw-card-text">Comprehensive utility classes for rapid development. Build custom designs without writing custom CSS.</p>
+                        <div style="padding: 2.5rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                            <h3 class="fw-card-title">Utility First</h3>
+                            <p class="fw-card-text">Comprehensive utility classes for rapid development. Build custom designs without writing CSS.</p>
                         </div>
                     </div>
                 </div>
                 <div class="fw-col-md-4 mb-4">
                     <div class="fw-card feature-card h-100">
-                        <div class="fw-card-body text-center">
-                            <div class="text-primary mb-3">
-                                <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                                </svg>
-                            </div>
-                            <h5 class="fw-card-title">Component Based</h5>
-                            <p class="fw-card-text">Pre-built components that work out of the box. Buttons, cards, forms, modals, and more.</p>
+                        <div style="padding: 2.5rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🧩</div>
+                            <h3 class="fw-card-title">Component Based</h3>
+                            <p class="fw-card-text">Pre-built components that work out of the box. Buttons, cards, forms, modals, and much more.</p>
                         </div>
                     </div>
                 </div>
@@ -121,37 +100,49 @@
     <!-- Quick Start -->
     <section id="getting-started" class="py-5 bg-light">
         <div class="fw-container">
-            <h2 class="text-center mb-5">Quick Start</h2>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: bold; color: #1a1a1a; margin-bottom: 1rem;">Get Started in Minutes</h2>
+                <p style="font-size: 1.1rem; color: #666;">Simple installation and easy setup for any project.</p>
+            </div>
             <div class="fw-row">
                 <div class="fw-col-lg-8 mx-auto">
                     <div class="fw-card">
-                        <div class="fw-card-body">
-                            <h4 class="fw-card-title">Installation</h4>
-                            <p>Add VisualUI to your project with a simple link tag:</p>
-                            <div class="code-block">
-                                <pre>&lt;link href="https://cdn.jsdelivr.net/npm/VisualUI@1.0.0/dist/VisualUI.css" rel="stylesheet"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/VisualUI@1.0.0/dist/VisualUI.js"&gt;&lt;/script&gt;</pre>
+                        <div style="padding: 2.5rem;">
+                            <div style="margin-bottom: 2rem;">
+                                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; color: #1a1a1a;">Using CDN (Quickest)</h3>
+                                <p style="margin-bottom: 1rem; color: #666;">Add FrameworkX to your project with a simple link tag:</p>
+                                <div class="code-block">
+                                    <pre>&lt;!-- CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.css" rel="stylesheet"&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.js"&gt;&lt;/script&gt;</pre>
+                                </div>
                             </div>
-                            
-                            <h4 class="fw-card-title mt-4">Basic Usage</h4>
-                            <p>Start building with VisualUI components:</p>
-                            <div class="code-block">
-                                <pre>&lt;div class="fw-container"&gt;
+
+                            <div>
+                                <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; color: #1a1a1a;">Basic Usage</h3>
+                                <p style="margin-bottom: 1rem; color: #666;">Start building with FrameworkX components:</p>
+                                <div class="code-block">
+                                    <pre>&lt;div class="fw-container"&gt;
   &lt;div class="fw-row"&gt;
-    &lt;div class="fw-col-md-6"&gt;
-      &lt;h1&gt;Hello VisualUI!&lt;/h1&gt;
-      &lt;button class="fw-btn fw-btn-primary"&gt;Click me&lt;/button&gt;
-    &lt;/div&gt;
     &lt;div class="fw-col-md-6"&gt;
       &lt;div class="fw-card"&gt;
         &lt;div class="fw-card-body"&gt;
-          &lt;h5 class="fw-card-title"&gt;Card Title&lt;/h5&gt;
-          &lt;p class="fw-card-text"&gt;Some quick example text.&lt;/p&gt;
+          &lt;h3 class="fw-card-title"&gt;Welcome!&lt;/h3&gt;
+          &lt;p class="fw-card-text"&gt;Your first FrameworkX component.&lt;/p&gt;
+          &lt;button class="fw-btn fw-btn-primary"&gt;Get Started&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 2rem;">
+                                <a href="getting-started.html" class="fw-btn fw-btn-primary" style="margin-right: 1rem;">Full Documentation →</a>
+                                <a href="components.html" class="fw-btn fw-btn-outline-light">View All Components</a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +263,7 @@
         <div class="fw-container">
             <div class="fw-footer-content">
                 <div class="fw-footer-section">
-                    <h4>VisualUI</h4>
+                    <h4>FrameworkX</h4>
                     <p>A modern CSS framework for building responsive, mobile-first websites.</p>
                     <div class="fw-footer-social">
                         <a href="#" class="fw-footer-social-link">
@@ -293,40 +284,39 @@
                     </div>
                 </div>
                 <div class="fw-footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>FrameworkX</h4>
+                    <p>Modern CSS framework for building responsive, mobile-first websites.</p>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Product</h4>
                     <ul class="fw-footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Components</a></li>
-                        <li><a href="#">Utilities</a></li>
-                        <li><a href="#">Examples</a></li>
+                        <li><a href="components.html">Components</a></li>
+                        <li><a href="utilities.html">Utilities</a></li>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="index.html">Home</a></li>
                     </ul>
                 </div>
                 <div class="fw-footer-section">
                     <h4>Resources</h4>
                     <ul class="fw-footer-links">
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">NPM</a></li>
-                        <li><a href="#">CDN</a></li>
+                        <li><a href="https://github.com/frameworkx/frameworkx">GitHub</a></li>
+                        <li><a href="#">NPM Package</a></li>
+                        <li><a href="#">Community</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
                 <div class="fw-footer-section">
-                    <h4>Community</h4>
+                    <h4>Company</h4>
                     <ul class="fw-footer-links">
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contributing</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">License</a></li>
                     </ul>
                 </div>
             </div>
             <div class="fw-footer-bottom">
-                <p class="fw-footer-copyright">&copy; 2024 VisualUI. All rights reserved.</p>
-                <ul class="fw-footer-bottom-links">
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">License</a></li>
-                </ul>
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
             </div>
         </div>
     </footer>

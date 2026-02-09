@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utilities - VisualUI</title>
-    <link href="../src/VisualUI.css" rel="stylesheet">
+    <title>Utilities - FrameworkX</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <link href="common-styles.css" rel="stylesheet">
     <style>
         .sidebar-nav {
             position: sticky;
@@ -12,19 +13,6 @@
         }
         .content-section {
             scroll-margin-top: 2rem;
-        }
-        .code-block {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            overflow-x: auto;
-        }
-        .code-block pre {
-            margin: 0;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.875rem;
         }
         .utility-demo {
             border: 1px solid #e9ecef;
@@ -37,21 +25,17 @@
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
     <!-- Header -->
-    <header class="fw-header fw-header-primary">
-        <div class="fw-container">
-            <div class="fw-header-container">
-                <a href="index.html" class="fw-header-brand">
-                    <span class="fw-header-brand-text">VisualUI</span>
-                </a>
-                <nav class="fw-header-nav">
-                    <a href="index.html" class="fw-header-nav-link">Home</a>
-                    <a href="getting-started.html" class="fw-header-nav-link">Getting Started</a>
-                    <a href="components.html" class="fw-header-nav-link">Components</a>
-                    <a href="utilities.html" class="fw-header-nav-link active">Utilities</a>
-                </nav>
-                <div class="fw-header-actions">
-                    <a href="https://github.com/VisualUI/VisualUI" class="fw-btn fw-btn-outline-light">GitHub</a>
-                </div>
+    <header class="fw-header">
+        <div class="fw-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <a href="index.html" class="fw-header-brand">FrameworkX</a>
+            <nav class="fw-header-nav">
+                <a href="index.html" class="fw-header-nav-link">Home</a>
+                <a href="getting-started.html" class="fw-header-nav-link">Getting Started</a>
+                <a href="components.html" class="fw-header-nav-link">Components</a>
+                <a href="utilities.html" class="fw-header-nav-link active">Utilities</a>
+            </nav>
+            <div class="fw-header-actions">
+                <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
             </div>
         </div>
     </header>
@@ -86,7 +70,7 @@
                 <!-- Spacing -->
                 <section id="spacing" class="content-section mb-5">
                     <h1>Spacing Utilities</h1>
-                    <p class="lead">VisualUI includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.</p>
+                    <p class="lead">FrameworkX includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.</p>
 
                     <h3>How it works</h3>
                     <p>Assign responsive-friendly <code>margin</code> or <code>padding</code> values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties.</p>
@@ -526,7 +510,7 @@
                     <p class="lead">Add or remove shadows to elements with box-shadow utilities.</p>
 
                     <h3>Examples</h3>
-                    <p>While shadows on components are disabled by default in VisualUI and can be enabled via <code>$enable-shadows</code>, you can also quickly add or remove shadows with our <code>box-shadow</code> utility classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated variables to match).</p>
+                    <p>While shadows on components are disabled by default in FrameworkX and can be enabled via CSS variables, you can also quickly add or remove shadows with our <code>box-shadow</code> utility classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated variables to match).</p>
 
                     <div class="utility-demo">
                         <div class="shadow-none p-3 mb-3 bg-light border">No shadow</div>
@@ -550,13 +534,41 @@
     <!-- Footer -->
     <footer class="fw-footer">
         <div class="fw-container">
+            <div class="fw-footer-content">
+                <div class="fw-footer-section">
+                    <h4>FrameworkX</h4>
+                    <p>Modern CSS framework for building responsive, mobile-first websites.</p>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Product</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="components.html">Components</a></li>
+                        <li><a href="utilities.html">Utilities</a></li>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Resources</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="https://github.com/frameworkx/frameworkx">GitHub</a></li>
+                        <li><a href="#">NPM Package</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Company</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="fw-footer-bottom">
-                <p class="fw-footer-copyright">&copy; 2024 VisualUI. All rights reserved.</p>
-                <ul class="fw-footer-bottom-links">
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">License</a></li>
-                </ul>
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started - VisualUI</title>
-    <link href="../src/VisualUI.css" rel="stylesheet">
+    <title>Getting Started - FrameworkX</title>
+    <link href="../src/frameworkx.css" rel="stylesheet">
+    <link href="common-styles.css" rel="stylesheet">
     <style>
         .sidebar-nav {
             position: sticky;
@@ -13,38 +14,21 @@
         .content-section {
             scroll-margin-top: 2rem;
         }
-        .code-block {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 0.375rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            overflow-x: auto;
-        }
-        .code-block pre {
-            margin: 0;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.875rem;
-        }
     </style>
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
     <!-- Header -->
-    <header class="fw-header fw-header-primary">
-        <div class="fw-container">
-            <div class="fw-header-container">
-                <a href="index.html" class="fw-header-brand">
-                    <span class="fw-header-brand-text">VisualUI</span>
-                </a>
-                <nav class="fw-header-nav">
-                    <a href="index.html" class="fw-header-nav-link">Home</a>
-                    <a href="getting-started.html" class="fw-header-nav-link active">Getting Started</a>
-                    <a href="components.html" class="fw-header-nav-link">Components</a>
-                    <a href="utilities.html" class="fw-header-nav-link">Utilities</a>
-                </nav>
-                <div class="fw-header-actions">
-                    <a href="https://github.com/VisualUI/VisualUI" class="fw-btn fw-btn-outline-light">GitHub</a>
-                </div>
+    <header class="fw-header">
+        <div class="fw-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <a href="index.html" class="fw-header-brand">FrameworkX</a>
+            <nav class="fw-header-nav">
+                <a href="index.html" class="fw-header-nav-link">Home</a>
+                <a href="getting-started.html" class="fw-header-nav-link active">Getting Started</a>
+                <a href="components.html" class="fw-header-nav-link">Components</a>
+                <a href="utilities.html" class="fw-header-nav-link">Utilities</a>
+            </nav>
+            <div class="fw-header-actions">
+                <a href="https://github.com/frameworkx/frameworkx" class="fw-btn fw-btn-outline-light">GitHub</a>
             </div>
         </div>
     </header>
@@ -76,61 +60,65 @@
                 <!-- Introduction -->
                 <section id="introduction" class="content-section mb-5">
                     <h1>Getting Started</h1>
-                    <p class="lead">An overview of VisualUI, how to download and use it, and some basic templates and examples.</p>
+                    <p class="lead">Learn how to install FrameworkX and start building modern, responsive websites.</p>
                     
-                    <h2>What is VisualUI?</h2>
-                    <p>VisualUI is a modern, production-ready CSS framework that combines the best features of Bootstrap and Tailwind CSS. It provides:</p>
+                    <h2>What is FrameworkX?</h2>
+                    <p>FrameworkX is a modern, production-ready CSS framework that combines the best features of Bootstrap and Tailwind CSS. It provides:</p>
                     <ul>
-                        <li>Pre-built components for rapid development</li>
-                        <li>Comprehensive utility classes for custom designs</li>
-                        <li>Responsive grid system</li>
-                        <li>Modern CSS variables for easy theming</li>
-                        <li>Lightweight JavaScript components</li>
-                        <li>Mobile-first approach</li>
+                        <li><strong>Pre-built components</strong> - Buttons, cards, forms, modals, and more for rapid development</li>
+                        <li><strong>Utility classes</strong> - Comprehensive utilities for custom designs without writing CSS</li>
+                        <li><strong>Responsive grid system</strong> - Mobile-first layout that adapts to any screen size</li>
+                        <li><strong>CSS variables</strong> - Easy theming and customization with modern CSS</li>
+                        <li><strong>Lightweight JavaScript</strong> - Optional interactive components like modals and dropdowns</li>
+                        <li><strong>Optimized for performance</strong> - Minimal footprint with no external dependencies</li>
                     </ul>
                 </section>
 
                 <!-- Download -->
                 <section id="download" class="content-section mb-5">
                     <h2>Download</h2>
-                    <p>Get started with VisualUI in your project by including the pre-built CSS and JS files.</p>
+                    <p>Get started with FrameworkX in your project by including the pre-built CSS and JS files.</p>
 
-                    <h3>CDN</h3>
-                    <p>The quickest way to get started is to use the CDN:</p>
+                    <h3>CDN (Recommended for Quick Start)</h3>
+                    <p>The quickest way to get started is to use the CDN. No installation required:</p>
                     <div class="code-block">
-                        <pre>&lt;!-- CSS --&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/VisualUI@1.0.0/dist/VisualUI.css" rel="stylesheet"&gt;
+                        <pre>&lt;!-- Add this in your &lt;head&gt; --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.css" rel="stylesheet"&gt;
 
-&lt;!-- JavaScript --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/VisualUI@1.0.0/dist/VisualUI.js"&gt;&lt;/script&gt;</pre>
+&lt;!-- Add this before closing &lt;/body&gt; --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/frameworkx@1.0.0/dist/frameworkx.js"&gt;&lt;/script&gt;</pre>
+                    </div>
+
+                    <h3>NPM (Recommended for Projects)</h3>
+                    <p>Install FrameworkX via npm for better version control and integration:</p>
+                    <div class="code-block">
+                        <pre>npm install frameworkx</pre>
                     </div>
 
                     <h3>Download Files</h3>
-                    <p>Download the compiled and minified versions of VisualUI:</p>
-                    <div class="d-flex gap-3 mb-3">
+                    <p>Download the compiled and minified versions:</p>
+                    <div class="d-flex gap-3 mb-3" style="flex-wrap: wrap;">
                         <a href="#" class="fw-btn fw-btn-primary">Download CSS</a>
-                        <a href="#" class="fw-btn fw-btn-secondary">Download JS</a>
-                        <a href="#" class="fw-btn fw-btn-outline-primary">Download Source</a>
+                        <a href="#" class="fw-btn fw-btn-primary">Download JS</a>
+                        <a href="#" class="fw-btn fw-btn-secondary">Download Source</a>
                     </div>
-
-                    <h3>Package Managers</h3>
-                    <p>Install VisualUI using your favorite package manager:</p>
+                    <p>Or install FrameworkX using your favorite package manager:</p>
                     <div class="code-block">
                         <pre># NPM
-npm install VisualUI
+npm install frameworkx
 
 # Yarn
-yarn add VisualUI
+yarn add frameworkx
 
-# Bower
-bower install VisualUI</pre>
+# PNPM
+pnpm add frameworkx</pre>
                     </div>
                 </section>
 
                 <!-- Contents -->
                 <section id="contents" class="content-section mb-5">
                     <h2>Contents</h2>
-                    <p>VisualUI is downloaded in two formats:</p>
+                    <p>FrameworkX is downloaded in two formats:</p>
                     <ul>
                         <li><strong>Compiled CSS and JS</strong> - Ready-to-use minified files</li>
                         <li><strong>Source files</strong> - Individual source files for customization</li>
@@ -139,18 +127,18 @@ bower install VisualUI</pre>
                     <h3>Compiled Files</h3>
                     <p>The compiled download includes:</p>
                     <div class="code-block">
-                        <pre>VisualUI/
+                        <pre>frameworkx/
 |-- dist/
-|   |-- VisualUI.css
-|   |-- VisualUI.min.css
-|   |-- VisualUI.js
-|   `-- VisualUI.min.js</pre>
+|   |-- frameworkx.css
+|   |-- frameworkx.min.css
+|   |-- frameworkx.js
+|   `-- frameworkx.min.js</pre>
                     </div>
 
                     <h3>Source Files</h3>
                     <p>The source download includes the complete project structure:</p>
                     <div class="code-block">
-                        <pre>VisualUI/
+                        <pre>frameworkx/
 |-- src/
 |   |-- core/
 |   |   |-- _reset.css
@@ -179,14 +167,14 @@ bower install VisualUI</pre>
 |   |   |-- modal.js
 |   |   |-- dropdown.js
 |   |   `-- collapse.js
-|   `-- VisualUI.css</pre>
+|   `-- frameworkx.css</pre>
                     </div>
                 </section>
 
                 <!-- Browser Support -->
                 <section id="browser-support" class="content-section mb-5">
                     <h2>Browser Support</h2>
-                    <p>VisualUI supports the latest, stable releases of all major browsers:</p>
+                    <p>FrameworkX supports the latest, stable releases of all major browsers:</p>
                     <ul>
                         <li>Chrome (latest)</li>
                         <li>Firefox (latest)</li>
@@ -203,7 +191,7 @@ bower install VisualUI</pre>
                 <!-- Customization -->
                 <section id="customization" class="content-section mb-5">
                     <h2>Customization</h2>
-                    <p>VisualUI is built with CSS variables, making it easy to customize the appearance:</p>
+                    <p>FrameworkX is built with CSS variables, making it easy to customize the appearance:</p>
 
                     <h3>Override Variables</h3>
                     <p>Create your own CSS file and override the default variables:</p>
@@ -234,7 +222,7 @@ npm run build:js</pre>
                 <!-- Build Tools -->
                 <section id="build-tools" class="content-section mb-5">
                     <h2>Build Tools</h2>
-                    <p>VisualUI can be integrated with various build tools:</p>
+                    <p>FrameworkX can be integrated with various build tools:</p>
 
                     <h3>Webpack</h3>
                     <div class="code-block">
@@ -311,13 +299,41 @@ module.exports = {
     <!-- Footer -->
     <footer class="fw-footer">
         <div class="fw-container">
+            <div class="fw-footer-content">
+                <div class="fw-footer-section">
+                    <h4>FrameworkX</h4>
+                    <p>Modern CSS framework for building responsive, mobile-first websites.</p>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Product</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="components.html">Components</a></li>
+                        <li><a href="utilities.html">Utilities</a></li>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Resources</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="https://github.com/frameworkx/frameworkx">GitHub</a></li>
+                        <li><a href="#">NPM Package</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="fw-footer-section">
+                    <h4>Company</h4>
+                    <ul class="fw-footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="fw-footer-bottom">
-                <p class="fw-footer-copyright">&copy; 2024 VisualUI. All rights reserved.</p>
-                <ul class="fw-footer-bottom-links">
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">License</a></li>
-                </ul>
+                <p class="fw-footer-copyright">&copy; 2024 FrameworkX. All rights reserved.</p>
             </div>
         </div>
     </footer>
