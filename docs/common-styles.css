@@ -136,6 +136,116 @@ body {
 /* Grid System */
 /* Grid system styles are defined in src/core/_grid.css */
 
+/* Smart Grid Spacing System - Gutter System */
+/* This system automatically handles spacing between columns without manual margin/padding utility classes */
+
+/* Default gutter size (1.5rem horizontal gutter = 0.75rem padding per side) */
+/* Columns receive: padding-left: 0.75rem, padding-right: 0.75rem */
+/* Row receives: margin-left: -0.75rem, margin-right: -0.75rem */
+
+/* Gutter variations - adjust column internal padding and row negative margins */
+.fw-row.gutter-sm {
+  margin-right: calc(var(--fw-spacing-2) * -1);
+  margin-left: calc(var(--fw-spacing-2) * -1);
+}
+
+.fw-row.gutter-sm > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-2);
+  padding-left: var(--fw-spacing-2);
+}
+
+.fw-row.gutter-md {
+  margin-right: calc(var(--fw-spacing-3) * -1);
+  margin-left: calc(var(--fw-spacing-3) * -1);
+}
+
+.fw-row.gutter-md > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-3);
+  padding-left: var(--fw-spacing-3);
+}
+
+.fw-row.gutter-lg {
+  margin-right: calc(var(--fw-spacing-4) * -1);
+  margin-left: calc(var(--fw-spacing-4) * -1);
+}
+
+.fw-row.gutter-lg > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-4);
+  padding-left: var(--fw-spacing-4);
+}
+
+.fw-row.gutter-xl {
+  margin-right: calc(var(--fw-spacing-5) * -1);
+  margin-left: calc(var(--fw-spacing-5) * -1);
+}
+
+.fw-row.gutter-xl > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-5);
+  padding-left: var(--fw-spacing-5);
+}
+
+/* Vertical gutter spacing (row gap for multi-line layouts) */
+.fw-row.gy-sm > * {
+  margin-bottom: var(--fw-spacing-2);
+}
+
+.fw-row.gy-md > * {
+  margin-bottom: var(--fw-spacing-3);
+}
+
+.fw-row.gy-lg > * {
+  margin-bottom: var(--fw-spacing-4);
+}
+
+.fw-row.gy-xl > * {
+  margin-bottom: var(--fw-spacing-5);
+}
+
+/* Combined horizontal and vertical gutter (g-* combines gx and gy) */
+.fw-row.g-sm {
+  margin-right: calc(var(--fw-spacing-2) * -1);
+  margin-left: calc(var(--fw-spacing-2) * -1);
+}
+
+.fw-row.g-sm > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-2);
+  padding-left: var(--fw-spacing-2);
+  margin-bottom: var(--fw-spacing-2);
+}
+
+.fw-row.g-md {
+  margin-right: calc(var(--fw-spacing-3) * -1);
+  margin-left: calc(var(--fw-spacing-3) * -1);
+}
+
+.fw-row.g-md > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-3);
+  padding-left: var(--fw-spacing-3);
+  margin-bottom: var(--fw-spacing-3);
+}
+
+.fw-row.g-lg {
+  margin-right: calc(var(--fw-spacing-4) * -1);
+  margin-left: calc(var(--fw-spacing-4) * -1);
+}
+
+.fw-row.g-lg > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-4);
+  padding-left: var(--fw-spacing-4);
+  margin-bottom: var(--fw-spacing-4);
+}
+
+.fw-row.g-xl {
+  margin-right: calc(var(--fw-spacing-5) * -1);
+  margin-left: calc(var(--fw-spacing-5) * -1);
+}
+
+.fw-row.g-xl > [class*="fw-col"] {
+  padding-right: var(--fw-spacing-5);
+  padding-left: var(--fw-spacing-5);
+  margin-bottom: var(--fw-spacing-5);
+}
+
 /* Utility Classes */
 .my-5 { margin-top: 3rem; margin-bottom: 3rem; }
 .mb-5 { margin-bottom: 3rem; }
@@ -164,7 +274,29 @@ body {
 .bg-light { background: #f8f9fa; }
 
 /* Responsive Design */
+/* Smart Grid Spacing System - Gutter Responsive Adjustments */
 @media (max-width: 1024px) {
+    /* Maintain gutter spacing at tablet size */
+    .fw-row.gutter-sm {
+      margin-right: calc(var(--fw-spacing-2) * -1);
+      margin-left: calc(var(--fw-spacing-2) * -1);
+    }
+
+    .fw-row.gutter-sm > [class*="fw-col"] {
+      padding-right: var(--fw-spacing-2);
+      padding-left: var(--fw-spacing-2);
+    }
+
+    .fw-row.gutter-md {
+      margin-right: calc(var(--fw-spacing-3) * -1);
+      margin-left: calc(var(--fw-spacing-3) * -1);
+    }
+
+    .fw-row.gutter-md > [class*="fw-col"] {
+      padding-right: var(--fw-spacing-3);
+      padding-left: var(--fw-spacing-3);
+    }
+
     /* Maintain column gaps at tablet size */
     .gap-1 { gap: 0.5rem; }
     .gap-2 { gap: 0.75rem; }
@@ -180,6 +312,46 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Reduce gutter spacing on mobile devices */
+    .fw-row {
+      margin-right: calc(var(--fw-spacing-2) * -1);
+      margin-left: calc(var(--fw-spacing-2) * -1);
+    }
+
+    .fw-row > [class*="fw-col"] {
+      padding-right: var(--fw-spacing-2);
+      padding-left: var(--fw-spacing-2);
+    }
+
+    .fw-row.gutter-sm {
+      margin-right: calc(var(--fw-spacing-1) * -1);
+      margin-left: calc(var(--fw-spacing-1) * -1);
+    }
+
+    .fw-row.gutter-sm > [class*="fw-col"] {
+      padding-right: var(--fw-spacing-1);
+      padding-left: var(--fw-spacing-1);
+    }
+
+    .fw-row.gutter-md {
+      margin-right: calc(var(--fw-spacing-2) * -1);
+      margin-left: calc(var(--fw-spacing-2) * -1);
+    }
+
+    .fw-row.gutter-md > [class*="fw-col"] {
+      padding-right: var(--fw-spacing-2);
+      padding-left: var(--fw-spacing-2);
+    }
+
+    /* Mobile vertical gutter adjustments */
+    .fw-row.gy-sm > * {
+      margin-bottom: var(--fw-spacing-1);
+    }
+
+    .fw-row.gy-md > * {
+      margin-bottom: var(--fw-spacing-2);
+    }
+
     /* Maintain column gaps at mobile size */
     .gap-1 { gap: 0.5rem; }
     .gap-2 { gap: 0.75rem; }
