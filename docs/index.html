@@ -24,6 +24,112 @@
         .nav-pills .nav-link.active {
             background-color: #007bff;
         }
+        #components .mb-5 {
+            margin-bottom: 2.5rem;
+        }
+        #components h2 {
+            margin-bottom: 2.5rem;
+        }
+        #components h3 {
+            margin-bottom: 1rem;
+        }
+        #components .d-flex.gap-2 {
+            gap: 0.75rem;
+        }
+        #components .fw-alert {
+            margin-bottom: 0.75rem;
+        }
+        #components .fw-row {
+            row-gap: 1.5rem;
+        }
+        #components .fw-col-md-4 {
+            display: flex;
+        }
+        #components .fw-card {
+            height: 100%;
+        }
+        #components .fw-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        #components .fw-card-body .fw-btn {
+            align-self: flex-start;
+        }
+        #components .fw-btn {
+            border-radius: 999px;
+            padding: 0.5rem 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            box-shadow: 0 8px 18px rgba(27, 31, 42, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+        #components .fw-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 22px rgba(27, 31, 42, 0.18);
+        }
+        #components .fw-btn:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(74, 208, 205, 0.35), 0 10px 22px rgba(27, 31, 42, 0.18);
+        }
+        #components .fw-btn:active {
+            transform: translateY(0);
+            filter: brightness(0.95);
+        }
+        #components .fw-btn-primary {
+            color: #4AD0CD;
+            border: 1px solid #4AD0CD;
+            background: transparent;
+        }
+        #components .fw-btn-secondary {
+            color: #5c6470;
+            border: 1px solid #5c6470;
+            background: transparent;
+        }
+        #components .fw-btn-success {
+            color: #2fb7a4;
+            border: 1px solid #2fb7a4;
+            background: transparent;
+        }
+        #components .fw-btn-danger {
+            color: #e0545d;
+            border: 1px solid #e0545d;
+            background: transparent;
+        }
+        #components .fw-btn-warning {
+            color: #ffb454;
+            border: 1px solid #ffb454;
+            background: transparent;
+        }
+        #components .fw-btn-info {
+            color: #3aaed8;
+            border: 1px solid #3aaed8;
+            background: transparent;
+        }
+        #components .fw-btn-light {
+            color: #1b1f2a;
+            border: 1px solid #e7ded6;
+            background: #fff;
+        }
+        #components .fw-btn-dark {
+            color: #1b1f2a;
+            border: 1px solid #1b1f2a;
+            background: transparent;
+        }
+        #components .fw-btn:hover,
+        #components .fw-btn:focus {
+            filter: none;
+            background: rgba(74, 208, 205, 0.08);
+        }
+        #components .fw-btn-light:hover,
+        #components .fw-btn-light:focus {
+            background: var(--fw-color-light);
+        }
+        @media (max-width: 768px) {
+            #components h2 {
+                font-size: 2rem;
+            }
+        }
     </style>
     <link href="docs-theme.css" rel="stylesheet"></head>
 <body>
@@ -396,4 +502,3 @@
     <script src="../src/js/collapse.js"></script>
 </body>
 </html>
-

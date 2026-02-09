@@ -1,0 +1,93 @@
+/* FrameworkX Toast */
+
+.fw-toast-container {
+  position: fixed;
+  top: var(--fw-spacing-4);
+  right: var(--fw-spacing-4);
+  z-index: var(--fw-z-index-popover);
+  display: flex;
+  flex-direction: column;
+  gap: var(--fw-spacing-3);
+  pointer-events: none;
+}
+
+.fw-toast-container.bottom-right {
+  top: auto;
+  bottom: var(--fw-spacing-4);
+}
+
+.fw-toast-container.top-left {
+  right: auto;
+  left: var(--fw-spacing-4);
+}
+
+.fw-toast-container.bottom-left {
+  top: auto;
+  right: auto;
+  left: var(--fw-spacing-4);
+  bottom: var(--fw-spacing-4);
+}
+
+.fw-toast {
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--fw-spacing-3);
+  align-items: center;
+  padding: var(--fw-spacing-3) var(--fw-spacing-4);
+  border-radius: var(--fw-border-radius-lg);
+  border: 1px solid var(--fw-color-gray-200);
+  background: var(--fw-color-white);
+  box-shadow: var(--fw-shadow-lg);
+  min-width: 260px;
+  max-width: min(92vw, 380px);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.fw-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fw-toast-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.fw-toast-title {
+  font-weight: var(--fw-font-weight-semibold);
+  margin-bottom: 0.1rem;
+}
+
+.fw-toast-message {
+  color: var(--fw-color-secondary);
+  font-size: var(--fw-font-size-sm);
+}
+
+.fw-toast-close {
+  background: transparent;
+  border: 0;
+  color: var(--fw-color-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.fw-toast-success .fw-toast-icon { background: var(--fw-color-success); }
+.fw-toast-error .fw-toast-icon { background: var(--fw-color-danger); }
+.fw-toast-warning .fw-toast-icon { background: var(--fw-color-warning); color: var(--fw-color-dark); }
+.fw-toast-info .fw-toast-icon { background: var(--fw-color-info); }
+
+@media (max-width: 576px) {
+  .fw-toast-container {
+    left: var(--fw-spacing-2);
+    right: var(--fw-spacing-2);
+  }
+}

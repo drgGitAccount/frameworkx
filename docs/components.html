@@ -185,6 +185,39 @@
         .modal-bottom .fw-modal-dialog {
             margin: 1.5rem;
         }
+        /* Button palette to match design system */
+        #buttons .fw-btn-primary { background: #4AD0CD; border-color: #4AD0CD; color: #fff; }
+        #buttons .fw-btn-secondary { background: #5c6470; border-color: #5c6470; color: #fff; }
+        #buttons .fw-btn-success { background: #2fb7a4; border-color: #2fb7a4; color: #fff; }
+        #buttons .fw-btn-danger { background: #e0545d; border-color: #e0545d; color: #fff; }
+        #buttons .fw-btn-warning { background: #ffb454; border-color: #ffb454; color: #1b1f2a; }
+        #buttons .fw-btn-info { background: #3aaed8; border-color: #3aaed8; color: #fff; }
+        #buttons .fw-btn-light { background: #fff; border-color: #e7ded6; color: #1b1f2a; }
+        #buttons .fw-btn-dark { background: #1b1f2a; border-color: #1b1f2a; color: #fff; }
+        #buttons .fw-btn-outline-primary { color: #4AD0CD; border-color: #4AD0CD; }
+        #buttons .fw-btn-outline-secondary { color: #5c6470; border-color: #5c6470; }
+        #buttons .fw-btn-outline-success { color: #2fb7a4; border-color: #2fb7a4; }
+        #buttons .fw-btn-outline-danger { color: #e0545d; border-color: #e0545d; }
+        #buttons .fw-btn-outline-warning { color: #ffb454; border-color: #ffb454; }
+        #buttons .fw-btn-outline-info { color: #3aaed8; border-color: #3aaed8; }
+        #buttons .fw-btn-outline-light { color: #1b1f2a; border-color: #e7ded6; background: #fff; }
+        #buttons .fw-btn-outline-dark { color: #1b1f2a; border-color: #1b1f2a; }
+        #buttons .fw-btn-outline-primary:hover,
+        #buttons .fw-btn-outline-primary:focus { background: #4AD0CD; color: #fff; }
+        #buttons .fw-btn-outline-secondary:hover,
+        #buttons .fw-btn-outline-secondary:focus { background: #5c6470; color: #fff; }
+        #buttons .fw-btn-outline-success:hover,
+        #buttons .fw-btn-outline-success:focus { background: #2fb7a4; color: #fff; }
+        #buttons .fw-btn-outline-danger:hover,
+        #buttons .fw-btn-outline-danger:focus { background: #e0545d; color: #fff; }
+        #buttons .fw-btn-outline-warning:hover,
+        #buttons .fw-btn-outline-warning:focus { background: #ffb454; color: #1b1f2a; }
+        #buttons .fw-btn-outline-info:hover,
+        #buttons .fw-btn-outline-info:focus { background: #3aaed8; color: #fff; }
+        #buttons .fw-btn-outline-light:hover,
+        #buttons .fw-btn-outline-light:focus { background: #fff; color: #1b1f2a; }
+        #buttons .fw-btn-outline-dark:hover,
+        #buttons .fw-btn-outline-dark:focus { background: #1b1f2a; color: #fff; }
         @media (max-width: 768px) {
             .inline-form .fw-form-control,
             .inline-form .fw-form-select {
@@ -228,6 +261,7 @@
                                 <a class="nav-link" href="#forms">Forms</a>
                                 <a class="nav-link" href="#modal">Modal</a>
                                 <a class="nav-link" href="#drawer">Drawer</a>
+                                <a class="nav-link" href="#toast">Toast</a>
                                 <a class="nav-link" href="#header">Header</a>
                                 <a class="nav-link" href="#footer">Footer</a>
                                 <a class="nav-link" href="#sidebar">Sidebar</a>
@@ -923,6 +957,31 @@
                     </div>
                 </section>
 
+                <!-- Toast -->
+                <section id="toast" class="content-section mb-5">
+                    <h1>Toast</h1>
+                    <p class="lead">Non-blocking notifications that stack and auto-dismiss with pause on hover.</p>
+
+                    <h3>Examples</h3>
+                    <div class="modal-demo-row">
+                        <button type="button" class="fw-btn fw-btn-success" onclick="FrameworkX.Toast.create({type:'success',title:'Success',message:'Saved successfully'})">Success</button>
+                        <button type="button" class="fw-btn fw-btn-danger" onclick="FrameworkX.Toast.create({type:'error',title:'Error',message:'Something went wrong'})">Error</button>
+                        <button type="button" class="fw-btn fw-btn-warning" onclick="FrameworkX.Toast.create({type:'warning',title:'Warning',message:'Check your inputs'})">Warning</button>
+                        <button type="button" class="fw-btn fw-btn-info" onclick="FrameworkX.Toast.create({type:'info',title:'Info',message:'New update available'})">Info</button>
+                    </div>
+
+                    <h3>Code</h3>
+                    <div class="code-block">
+                        <pre>FrameworkX.Toast.create({
+  type: 'success',
+  title: 'Success',
+  message: 'Saved successfully',
+  position: 'top-right',
+  delay: 4000
+});</pre>
+                    </div>
+                </section>
+
                 <!-- Header -->
                 <section id="header" class="content-section mb-5">
                     <h1>Header</h1>
@@ -1121,6 +1180,7 @@
 
     <script src="../src/js/modal.js"></script>
     <script src="../src/js/drawer.js"></script>
+    <script src="../src/js/toast.js"></script>
     <script src="../src/js/dropdown.js"></script>
     <script src="../src/js/collapse.js"></script>
 </body>
